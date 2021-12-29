@@ -1,0 +1,17 @@
+body {
+    background-color: #ef0001;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+
+}
+
+#logo {
+    width: 10%;
+    height: 10%;
+    display: inline;
+}
+
+#title {
+    display: inline;
+}
+
