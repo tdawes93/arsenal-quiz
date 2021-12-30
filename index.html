@@ -14,19 +14,42 @@
 </head>
 
 <body>
-    <section class="home">
+    <section id="home">
         <div class="heading">
-            <img src="assets/images/arsenal-logo.png" alt="Arsenal FC Logo" id="logo">
+            <!--<img src="assets/images/arsenal-logo.png" alt="Arsenal FC Logo" id="logo">-->
             <h1 id="title">Arsenal Quiz</h1>
             <p class="about">Are you a true Gooner? Or are you a Tottenham fan in disguise? Find out with our Arsenal
                 Quiz!</p>
         </div>
         <div class="controls">
-            <button id="kick-off">Kick Off!</button>
-            <button id="rules">Rules</button>
-            <button id="league-table">League Table</button>
+            <button class="btn" id="kick-off">Kick Off!</button>
+            <button class="btn" id="rules">Rules</button>
+            <button class="btn" id="league-table">League Table</button>
         </div>
         <footer>Author and SM links</footer>
+    </section>
+    <section id="game-area">
+        <div class="container">
+            <div id="question-count">
+                <h2 id="question-progress">Question #/#</h2>
+            </div>
+            <div id="score-count">
+                <h2>Score: <span id="score-number">#</span></h2>
+            </div>
+            <div id="questions-box">
+                <h2>Question:</h2>
+                <p id="question"></p>
+            </div>
+            <div id="answers-box">
+                <button class="btn answer">a</button>
+                <button class="btn answer">b</button>
+                <button class="btn answer">c</button>
+                <button class="btn answer">d</button>
+            </div>
+        </div>
+    </section>
+    <section id="rules-section">
+        
     </section>
 
 
