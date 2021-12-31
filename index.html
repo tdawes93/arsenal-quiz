@@ -52,7 +52,7 @@
         <button class="btn" id="submit">Finish Quiz</button>
     </section>
     <section id="results">
-        <div id="results-container">
+        <div class="container" id="results-container">
             <div class="popup-header">
                 <h2>Results!</h2>
             </div>
@@ -62,17 +62,17 @@
                 <p>You're North London through and through!</p>
             </div>
             <div class="popup-footer">
-                <button class="btn"id="home">Homepage</button>
+                <button class="btn" id="home">Homepage</button>
                 <button class="btn" id="restart">ReMatch</button>
                 <button class="btn leaderboard" id="results-league-table">League Table</button>
             </div>
         </div>
     </section>
     <section id="rules-section">
-        <div>
+        <div class="popup-header">
             <h2>Rules</h2>
         </div>
-        <div>
+        <div class="popup-content">
             <h3>How to play:</h3>
             <ul>
                 <li>Press Play to start the game</li>
@@ -88,20 +88,25 @@
         </div>
     </section>
     <section id="league-table">
-        <div>
-            <h2>League Table</h2>
-        </div>
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Name</th>
-                        <th>Score</th>
-                    </tr>
-                </thead>
-                <tbody id="league-table-list"></tbody>
-            </table>
+        <div class="container" id="league-table-container">
+            <div class="popup-header">
+                <h2>League Table</h2>
+            </div>
+            <div class="popup-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="league-table-list"></tbody>
+                </table>
+            </div>
+            <div class="popup-footer">
+                <button class="btn" id="back">Back</button>
+            </div>
         </div>
     </section>
     <script src="assets/js/script.js"></script>

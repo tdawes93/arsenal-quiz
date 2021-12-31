@@ -5,3 +5,31 @@ const playButton = document.getElementById("kick-off");
 const rulesButton = document.getElementById("rules");
 const leagueTableButton = document.getElementById("league-table");
 const quizContainer = document.getElementById("quiz-container");
+
+
+const questions = [
+    {question:"...",
+    answers: {
+        a: "...",
+        b: "....",
+        c: ".....",
+        d: ".."
+    },
+    correctAnswer: "a"},
+    {question:"...",
+    answers: {
+        a: "...",
+        b: "....",
+        c: ".....",
+        d: ".."
+    },
+    correctAnswer: "b"},
+    {question:"...",
+    answers: {
+        a: "...",
+        b: "....",
+        c: ".....",
+        d: ".."
+    },
+    correctAnswer: "d"}
+];
