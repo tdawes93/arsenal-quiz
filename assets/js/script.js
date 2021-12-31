@@ -41,15 +41,25 @@ const questions = [
 function buildQuiz() {
 };
 
+function startQuiz(){};
+
+function selectAnswer(){};
+
 function checkAnswer(){};
 
+function displayCorrectAnswer(){};
+
 function calculateScore(){};
+
+function finishQuiz(){};
+
+function displayScore(){};
+
+function saveScore(){};
 
 function displayLeagueTable(event){
     leagueTableModal.style.display = "block";
 };
-
-function saveScore(){};
 
 function displayRules(){
     rulesModal.style.display = "block";
