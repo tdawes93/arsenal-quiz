@@ -13,5 +13,12 @@
 
 #title {
     display: inline;
+} */
+
+#league-table-container {
+    display: none;
 }
 
+#rules-container {
+    display: none;
+}
