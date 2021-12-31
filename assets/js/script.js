@@ -33,3 +33,25 @@ const questions = [
     },
     correctAnswer: "d"}
 ];
+
+function buildQuiz() {
+};
+
+function checkAnswer(){};
+
+function calculateScore(){};
+
+function displayLeagueTable(){};
+
+function saveScore(){};
+
+function displayRules(){};
+
+function returnHome(){};
+
+function next(){};
+
+function previous(){};
+
+
+
