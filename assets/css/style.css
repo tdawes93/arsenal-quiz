@@ -8,38 +8,68 @@
 body {
     background-color: #F1F2F3;
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .main {
     padding: 0.5rem 1rem;
 }
 
-h1, h2 {
+h1,
+h2 {
     text-transform: uppercase;
 }
 
 #heading {
-    background: #DC0001;
+    background: #ef0001;
     color: #ffffff;
     padding: 1rem;
     vertical-align: middle;
 }
 
+.popup-header {
+    border-top: #ef0001 solid;
+    background-color: #172030;
+    color: #ffffff;
+    padding: 0.5rem;
+}
+
 .controls {
-    background: #172030;
     text-align: center;
 }
 
 .controls button {
+    display: inline-block;
     background: #172030;
     color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-#caption {
-    background: #ef0001;
-    color: #ffffff;
+#kick-off {
+    width: 25%;
+    height: 100%;
+}
+
+#rules {
+    width: 25%;
+}
+
+#league-table-button {
+    width: 35%;
+}
+
+.popup-content {
+    background: #ffffff;
+    border-top: #ef0001 solid;
     padding: 0.5rem;
     margin: 0.5rem 0;
+}
+
+.about {
+    text-transform: capitalize;
 }
 
 #logo {
@@ -92,12 +122,6 @@ h1, h2 {
     /* display: none;*/
 }
 
-.popup-header {
-    border-top: #DC0001 solid;
-    background-color: #172030;
-    color: #ffffff;
-    padding: 0.5rem 1rem;
-}
 
 #league-table {
     width: 100%;
@@ -117,4 +141,10 @@ h1, h2 {
 
 #rules-container {
     /*display: none;*/
+}
+
+.popup-content li {
+    list-style: inside;
+    padding-left: 1.5rem;
+    text-indent: -1.3rem;
 }
