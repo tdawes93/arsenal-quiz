@@ -39,14 +39,8 @@ const questions = [
 ];
 
 function buildQuiz() {
-};
 
-function startQuiz(){};
-
-function selectAnswer(){};
-
-function checkAnswer(){};
-
+}
 function displayCorrectAnswer(){};
 
 function calculateScore(){};
