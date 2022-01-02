@@ -24,7 +24,7 @@
         <div class="controls">
             <button class="btn" id="kick-off">Kick Off!</button>
             <button class="btn" id="rules">Rules</button>
-            <button class="btn" id="league-table">League Table</button>
+            <button class="btn" id="league-table-button">League Table</button>
         </div>
         <footer>Author and SM links</footer>
     </section>
@@ -34,7 +34,6 @@
                 <h2 id="question-progress">#/#</h2>
             </div>
             <div id="questions-box">
-                <h2>Question:</h2>
                 <p id="question">This is the question</p>
             </div>
             <div id="answers-box">
@@ -109,11 +108,11 @@
                 <h2>League Table</h2>
             </div>
             <div class="popup-content">
-                <table>
+                <table id="league-table">
                     <thead>
                         <tr>
-                            <th>Position</th>
-                            <th>Name</th>
+                            <th>Pos</th>
+                            <th class="league-table-mid-col">Player</th>
                             <th>Score</th>
                         </tr>
                     </thead>
