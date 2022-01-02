@@ -8,6 +8,8 @@ const quizContainer = document.getElementById("quiz-container");*/
 const rulesBtn = document.getElementById("rules");
 const backBtn = document.getElementsByClassName("back-btn");
 const rulesModal = document.getElementById("rules-section");
+const leagueTableBtn = document.getElementsByClassName("leaderboard");
+const leagueTableModal = document.getElementById("league-table-section");
 /*const rulesModal = document.getElementById("rules-section");
 const home = document.getElementById("home");
 const resultsModal = document.getElementById("results-container");
@@ -74,20 +76,28 @@ function back(event){
 
 leagueTableButton.addEventListener = ("click", displayLeagueTable);
 
-rulesButton.addEventListener = ("click", displayRules());
-
 backBtn.addEventListener = ("click", back());*/
 
 
-function displayRules (event) {
+function displayRules(event) {
     rulesModal.style.display = "block";
+}
+
+function displayLeagueTable(event) {
+    leagueTableModal.style.display = "block";
 }
 
 function back(event) {
     rulesModal.style.display = "none";
+    leagueTableModal.style.display = "none";
 }
 
-rulesBtn.addEventListener("click", displayRules)
+//Event Listeners//
+rulesBtn.addEventListener("click", displayRules);
+
+for (let i = 0; i < leagueTableBtn.length; i++) {
+leagueTableBtn[i].addEventListener("click", displayLeagueTable);
+}
 
 for (let i = 0; i < backBtn.length; i++) {
     backBtn[i].addEventListener("click", back);
