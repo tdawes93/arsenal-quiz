@@ -14,6 +14,7 @@ body {
 
 .main {
     padding: 0.5rem 1rem;
+    background-color: #F1F2F3;
 }
 
 h1,
@@ -25,7 +26,6 @@ h2 {
     background: #ef0001;
     color: #ffffff;
     padding: 1rem;
-    vertical-align: middle;
 }
 
 .popup-header {
@@ -42,22 +42,17 @@ h2 {
 .controls button {
     display: inline-block;
     background: #172030;
-    color: #ffffff;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
 }
 
 #kick-off {
     width: 25%;
-    height: 100%;
 }
 
 #rules {
     width: 25%;
 }
 
-#league-table-button {
+.leaderboard {
     width: 35%;
 }
 
@@ -68,6 +63,40 @@ h2 {
     margin: 0.5rem 0;
 }
 
+.popup-footer {
+    background-color: #ef0001;
+    border-top: #172030 solid;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.btn {
+    background-color: #ef0001;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    height: 100%;
+}
+
+.home-btn {
+    width: 25%;
+}
+
+.back-btn {
+    width: 100%;
+    font-size: large;
+}
+
+.back-btn:hover, .back-btn:focus {
+    text-decoration: underline #ffffff;
+    text-decoration-thickness: 2px;
+}
+
+#restart {
+    width: 25%;
+}
+
 .about {
     text-transform: capitalize;
 }
@@ -76,10 +105,12 @@ h2 {
     width: 10%;
     height: 10%;
     display: inline;
+    vertical-align: middle;
 }
 
 #title {
     display: inline;
+    vertical-align: middle;
 }
 
 #quiz-container {
@@ -122,7 +153,6 @@ h2 {
     /* display: none;*/
 }
 
-
 #league-table {
     width: 100%;
     border-spacing: 0;
@@ -139,8 +169,18 @@ h2 {
     border-left: #F1F2F3 solid;
 }
 
+#rules-section {
+    position: absolute;
+    z-index: 1;
+    overflow: auto;
+    width: 100%; 
+    left: 0;
+    top: 4rem;
+    display: none;
+}
+
 #rules-container {
-    /*display: none;*/
+    border: #172030 solid;
 }
 
 .popup-content li {
