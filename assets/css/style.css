@@ -149,8 +149,18 @@ h2 {
     vertical-align: middle;
 }
 
+#league-table-section {
+    position: absolute;
+    z-index: 1;
+    overflow: auto;
+    width: 100%; 
+    left: 0;
+    top: 4rem;
+    display: none;
+}
+
 #league-table-container {
-    /* display: none;*/
+    border: #172030 solid;
 }
 
 #league-table {
@@ -189,12 +199,3 @@ h2 {
     text-indent: -1.3rem;
 }
 
-#league-table-section {
-    position: absolute;
-    z-index: 1;
-    overflow: auto;
-    width: 100%; 
-    left: 0;
-    top: 4rem;
-    display: none;
-}
