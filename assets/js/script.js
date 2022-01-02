@@ -1,12 +1,14 @@
-const previousQuestion = document.getElementById("previous");
+/*const previousQuestion = document.getElementById("previous");
 const nextQuestion = document.getElementById("next");
 const finishQuiz = document.getElementById("submit");
 const playButton = document.getElementById("kick-off");
 const rulesButton = document.getElementById("rules");
 const leagueTableButton = document.getElementById("league-table");
-const quizContainer = document.getElementById("quiz-container");
+const quizContainer = document.getElementById("quiz-container");*/
+const rulesBtn = document.getElementById("rules");
 const backBtn = document.getElementsByClassName("back-btn");
 const rulesModal = document.getElementById("rules-section");
+/*const rulesModal = document.getElementById("rules-section");
 const home = document.getElementById("home");
 const resultsModal = document.getElementById("results-container");
 const leagueTableModal = document.getElementById("league-table-container");
@@ -72,7 +74,21 @@ function back(event){
 
 leagueTableButton.addEventListener = ("click", displayLeagueTable);
 
-rulesButton.addEventListener = ("click", displayRules);
+rulesButton.addEventListener = ("click", displayRules());
 
-backBtn.addEventListener = ("click", back);
+backBtn.addEventListener = ("click", back());*/
 
+
+function displayRules (event) {
+    rulesModal.style.display = "block";
+}
+
+function back(event) {
+    rulesModal.style.display = "none";
+}
+
+rulesBtn.addEventListener("click", displayRules)
+
+for (let i = 0; i < backBtn.length; i++) {
+    backBtn[i].addEventListener("click", back);
+}
