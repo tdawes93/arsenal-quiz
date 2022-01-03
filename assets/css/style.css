@@ -131,6 +131,7 @@ h2 {
     background: url(/assets/images/henry-celebration.jpg) no-repeat center center/cover;
     color: #ffffff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-size: 150%;
 }
 
 #answers-box {
