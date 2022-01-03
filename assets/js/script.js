@@ -9,6 +9,8 @@ const leagueTableBtn = document.getElementsByClassName("leaderboard");
 const leagueTableModal = document.getElementById("league-table-section");
 const rematchBtn = document.getElementById("restart");
 
+
+
 const questions = [
     {question:"hello",
     answers: {
@@ -37,7 +39,35 @@ const questions = [
 ];
 
 function buildQuiz() {
-    const output = [];
+    let i = 0;
+    quizContainer.innerHTML = `<div id="question-count">
+        <h2 id="question-progress">${i+1}/10</h2>
+    </div>
+    <div id="questions-box">
+        <p id="question">${questions[i].question}</p>
+    </div>
+    <div id="answers-box">
+        <label class="answer-option">
+            <input type="radio" name="question${i+1}" value="a" id="a">
+            ${questions[i].answers.a}
+        </label>
+        <label class="answer-option">
+            <input type="radio" name="question${i+1}" value="b" id="b">
+            ${questions[i].answers.b}
+        </label>
+        <label class="answer-option">
+            <input type="radio" name="question${i+1}" value="c" id="c">
+            ${questions[i].answers.c}
+        </label>
+        <label class="answer-option">
+            <input type="radio" name="question${i+1}" value="d" id="d">
+            ${questions[i].answers.d}
+        </label>
+    </div>`;
+    
+
+    
+    /*const output = [];
     questions.forEach(
         (currentQuestion, questionNumber) => {
     
@@ -66,7 +96,7 @@ function buildQuiz() {
       );
     
       // finally combine our output list into one string of HTML and put it on the page
-      quizContainer.innerHTML = output.join('');
+      quizContainer.innerHTML = output.join('');*/
     
     /*for (question of questions) {
 
@@ -96,11 +126,30 @@ function buildQuiz() {
     </div>`
     }*/
 }
-/*function displayCorrectAnswer(){};
+function displayCorrectAnswer(event){
+    let selectedAnswer = document.getElementsByTagName("input").selected;
+    if (selectedAnswer === questions[i].correctAnswer) {
+        selectedAnswer.style.backgroundColor = "green";
+    } else {
+        document.getElementById(`${questions[i].correctAnswer}`).style.backgroundColor = "green";
+        selectedAnswer.style.backgroundColor = "red";
+    }
+    calculateScore();
+};
 
-function calculateScore(){};
+function calculateScore(){
+    let score = 0;
+    let numberOfQuestions = 0;
+    if (selectedAnswer === questions[i].correctAnswer) {
+        score =+ 1;
+        numberOfQuestions =+ 1;
+    } else {
+        score = score;
+        numberOfQuestions =+ 1;
+    }
+};
 
-function finishQuiz(){};
+/*function finishQuiz(){};
 
 function displayScore(){};
 
@@ -140,5 +189,7 @@ leagueTableBtn[i].addEventListener("click", displayLeagueTable);
 for (let i = 0; i < backBtn.length; i++) {
     backBtn[i].addEventListener("click", back);
 }
+
+document.getElementsByTagName("input").selected.addEventListener("select", displayCorrectAnswer);
 
 
