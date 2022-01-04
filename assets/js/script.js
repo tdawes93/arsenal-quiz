@@ -45,8 +45,6 @@ const questions = [{
 ];
 
 
-
-
 function buildQuiz() {
     let i = 0;
     quizContainer.innerHTML = `<div id="question-count">
@@ -96,6 +94,13 @@ function buildQuiz() {
         </label>
     </div>`;*/
 }
+
+quizContainer.addEventListener("click", function(e) {
+	// e.target was the clicked element
+  if (e.target && e.target.matches("button.answer-option")) {
+    quizContainer.style.backgroundColor = "green";
+	}
+});
 
 function checkAnswer(event) {
     document.getElementById("a") = "green";
@@ -211,8 +216,8 @@ for (let i = 0; i < backBtn.length; i++) {
     backBtn[i].addEventListener("click", back);
 }
 
-const ans = document.getElementsByClassName("answer-option");
+/*const ans = document.getElementsByClassName("answer-option");
 
 for (let i = 0; i < ans.length; i++) {
     ans[i].addEventListener("click", checkAnswer);
-}
+}*/
