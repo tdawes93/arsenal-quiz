@@ -46,6 +46,10 @@ const questions = [{
 //Variables for quiz game
 let i = 0;
 
+
+/**
+ * This function pulls up new questions. Called when the user presses 'kick-off' and then subsequently after each answer is selected
+ */
 function buildQuiz() {
     quizContainer.innerHTML = `<div id="question-count">
     <h2 id="question-progress">${i+1}/10</h2>
@@ -72,101 +76,39 @@ function buildQuiz() {
 quizContainer.addEventListener("click", function (e) {
     console.log(e);
     console.log(e.target);
-        if (e.target && e.target.matches(`button#${questions[i].correctAnswer}`)) {
-            e.target.style.backgroundColor = "green";
-            } else {
-                document.getElementById(`${questions[i].correctAnswer}`).style.backgroundColor = "green";
-                e.target.style.backgroundColor = "red";
-            }
-        }
-);
-
-function checkAnswer(event) {
-    document.getElementById("a") = "green";
-}
-
-function displayCorrectAnswer() {
-    if (selectedAnswer === correctAns) {
-        console.log("correct");
-        document.getElementById(`${correctAns}`).style.backgroundColor = "green";
-
+    if (e.target && e.target.matches(`button#${questions[i].correctAnswer}`)) {
+        e.target.style.backgroundColor = "green";
+        i++;
     } else {
-        console.log("incorrect");
-        document.getElementById(`${correctAns}`).style.backgroundColor = "green";
-        document.getElementById(`${selectedAnswer}`).style.backgroundColor = "red";
-    }
-}
-
-
-
-
-/* answers.forEach(ans => {
-        ans.addEventListener('click', e => {
-            if (!acceptingAnswers) return;
-    
-            acceptingAnswers = false;
-            const selectedChoice = e.target;
-            const selectedAnswer = selectedChoice.dataset.number;
-    
-            //check if answer is correct and set the class
-            let classToApply = selectedAnswer == currentQuestion.correct ? 'btn-correct' : 'btn-incorrect';
-    
-            //if correct answer increase score
-            if (classToApply === 'btn-correct') {
-                incrementScore(SCORE_POINTS);
-            }
-    
-            //set class to change color for answer 
-            selectedChoice.classList.add(classToApply);
-            selectedChoice.classList.remove('ans-btn');
-    
-            //function to reset get new question
-            setTimeout(() => {
-                selectedChoice.classList.remove(classToApply);
-                selectedChoice.classList.add('ans-btn');
-                renderQuestion();
-    
-            }, 800);
-        });
-    });
-
-    /*
-    
-    if (selectedAnswer === questions[i].correctAnswer) {
-        selectedAnswer.style.backgroundColor = "green";
-    } else {
+        e.target.style.backgroundColor = "red";
         document.getElementById(`${questions[i].correctAnswer}`).style.backgroundColor = "green";
-        selectedAnswer.style.backgroundColor = "red";
+        i++;
     }
-    calculateScore();
-};
+});
 
-
-function calculateScore(){
+function calculateScore() {
     let score = 0;
     let numberOfQuestions = 0;
     if (selectedAnswer === questions[i].correctAnswer) {
-        score =+ 1;
-        numberOfQuestions =+ 1;
+        score = +1;
+        numberOfQuestions = +1;
     } else {
         score = score;
-        numberOfQuestions =+ 1;
+        numberOfQuestions = +1;
     }
-};*/
+};
 
-/*function finishQuiz(){};
+function finishQuiz() {};
 
-function displayScore(){};
+function displayScore() {};
 
-function saveScore(){};
+function saveScore() {};
 
-function returnHome(){
+function returnHome() {
     home.style.display = "block";
     quizContainer.style.display = "none";
     resultsModal.style.display = "none";
 };
-*/
-
 
 function displayRules(event) {
     rulesModal.style.display = "block";
@@ -194,9 +136,3 @@ for (let i = 0; i < leagueTableBtn.length; i++) {
 for (let i = 0; i < backBtn.length; i++) {
     backBtn[i].addEventListener("click", back);
 }
-
-/*const ans = document.getElementsByClassName("answer-option");
-
-for (let i = 0; i < ans.length; i++) {
-    ans[i].addEventListener("click", checkAnswer);
-}*/
