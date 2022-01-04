@@ -146,6 +146,22 @@ h2 {
     border-radius: 0.5rem;
 }
 
+#a {
+    width: 100%;
+}
+
+#b {
+    width: 100%;
+}
+
+#c {
+    width: 100%;
+}
+
+#d {
+    width: 100%;
+}
+
 .answer-option input {
     vertical-align: middle;
 }
