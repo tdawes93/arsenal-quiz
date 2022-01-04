@@ -8,9 +8,7 @@ const rulesModal = document.getElementById("rules-section");
 const leagueTableBtn = document.getElementsByClassName("leaderboard");
 const leagueTableModal = document.getElementById("league-table-section");
 const rematchBtn = document.getElementById("restart");
-const answers = document.getElementsByClassName("ans-btn");
-
-
+const answers = document.getElementsByClassName("answer-option");
 
 const questions = [{
         question: "How many games did arsenal go unbeaten when they won the invincibles season?",
@@ -45,8 +43,10 @@ const questions = [{
 ];
 
 
+//Variables for quiz game
+let i = 0;
+
 function buildQuiz() {
-    let i = 0;
     quizContainer.innerHTML = `<div id="question-count">
     <h2 id="question-progress">${i+1}/10</h2>
 </div>
@@ -67,40 +67,19 @@ function buildQuiz() {
         ${questions[i].answers.d}
     </button>
 </div>`;
-
-
-    /*`<div id="question-count">
-        <h2 id="question-progress">${i+1}/10</h2>
-    </div>
-    <div id="questions-box">
-        <p id="question">${questions[i].question}</p>
-    </div>
-    <div id="answers-box">
-        <label class="answer-option">
-            <input type="radio" name="question${i+1}" value="a" class="ans-btn" id="a">
-            ${questions[i].answers.a}
-        </label>
-        <label class="answer-option">
-            <input type="radio" name="question${i+1}" value="b" class="ans-btn" id="b">
-            ${questions[i].answers.b}
-        </label>
-        <label class="answer-option">
-            <input type="radio" name="question${i+1}" value="c" class="ans-btn" id="c">
-            ${questions[i].answers.c}
-        </label>
-        <label class="answer-option">
-            <input type="radio" name="question${i+1}" value="d" class="ans-btn" id="d">
-            ${questions[i].answers.d}
-        </label>
-    </div>`;*/
 }
 
-quizContainer.addEventListener("click", function(e) {
-	// e.target was the clicked element
-  if (e.target && e.target.matches("button.answer-option")) {
-    quizContainer.style.backgroundColor = "green";
-	}
-});
+quizContainer.addEventListener("click", function (e) {
+    console.log(e);
+    console.log(e.target);
+        if (e.target && e.target.matches(`button#${questions[i].correctAnswer}`)) {
+            e.target.style.backgroundColor = "green";
+            } else {
+                document.getElementById(`${questions[i].correctAnswer}`).style.backgroundColor = "green";
+                e.target.style.backgroundColor = "red";
+            }
+        }
+);
 
 function checkAnswer(event) {
     document.getElementById("a") = "green";
