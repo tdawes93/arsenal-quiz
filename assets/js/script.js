@@ -9,6 +9,7 @@ const leagueTableBtn = document.getElementsByClassName("leaderboard");
 const leagueTableModal = document.getElementById("league-table-section");
 const rematchBtn = document.getElementById("restart");
 const resultsModal = document.getElementById("results-section");
+const scoreBox = document.getElementById("score-box");
 
 const questions = [{
         question: "How many games did arsenal go unbeaten when they won the invincibles season?",
@@ -116,7 +117,7 @@ const questions = [{
 //Variables for quiz game
 let i = 0;
 let score = 0;
-let pointValue = 1;
+/*let pointValue = 1;*/
 
 
 /**
@@ -156,7 +157,7 @@ quizContainer.addEventListener("click", function (e) {
     if (e.target && e.target.matches(`button#${questions[i].correctAnswer}`)) {
         e.target.classList.add("correct-ans");
         //Increase score if answer correct
-        correctScore(pointValue);
+        score++;
     } else {
         e.target.classList.add("incorrect-ans");
         document.getElementById(`${questions[i].correctAnswer}`).classList.add("correct-ans");
@@ -176,13 +177,10 @@ quizContainer.addEventListener("click", function (e) {
     }
 });
 
-function correctScore(num) {
-    score = score + num;
-};
-
 function finishQuiz() {
     quizContainer.style.display = "none";
     resultsModal.style.display = "block";
+    displayScore();
 };
 
 function rematch(event) {
@@ -191,7 +189,13 @@ function rematch(event) {
     buildQuiz();
 }
 
-function displayScore() {};
+function displayScore() {
+    scoreBox.innerHTML = `
+    <h3>You Scored: ${score}/${i+10}</h3>
+                <div id="results-box">
+                    <p id="results-content">You're North London through and through!</p>
+                </div>`
+};
 
 function saveScore() {};
 
