@@ -192,25 +192,25 @@ function rematch(event) {
 function displayScore() {
     if (score <= 2) {
         scoreBox.innerHTML = `
-    <h3>You Scored: ${score}/${i+10}</h3>
+    <h3>You Scored: ${score}/${i+1}</h3>
                 <div id="results-box">
                     <p id="results-content">You're a Tottenham fan in disguise!</p>
                 </div>`;
     } else if (2 < score <= 5) {
         scoreBox.innerHTML = `
-    <h3>You Scored: ${score}/${i+10}</h3>
+    <h3>You Scored: ${score}/${i+1}</h3>
                 <div id="results-box">
                     <p id="results-content">You're a glory supporter! You know who Henry is but don't know your Pat Rice's from your Nigel Winterburn's!</p>
                 </div>`;
     } else if (5 < score <= 8) {
         scoreBox.innerHTML = `
-    <h3>You Scored: ${score}/${i+10}</h3>
+    <h3>You Scored: ${score}/${i+1}</h3>
                 <div id="results-box">
                     <p id="results-content">You're a true gunner. You know your stuff, provided it's about the first team!</p>
                 </div>`;
     } else {
         scoreBox.innerHTML = `
-    <h3>You Scored: ${score}/${i+10}</h3>
+    <h3>You Scored: ${score}/${i+1}</h3>
                 <div id="results-box">
                     <p id="results-content">You a bleed red and white! You've followed arsenal through unbeaten seasons and league cup final losses</p>
                 </div>`

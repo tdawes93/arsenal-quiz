@@ -41,17 +41,20 @@
             <div class="popup-header">
                 <h2>Results!</h2>
             </div>
-            <div class="popup-content" id="score-box">
-                <h3>You Scored: 9/10</h3>
-                <div id="results-box">
-                    <p id="results-content">You're North London through and through!</p>
-                </div>
+            <div class="popup-content">
+                <div id="score-box"></div>
+                <form action="" id="league-table-save-form">
+                <label for="username">Enter your name to save your score to our League-Table</label>
+                <input type="text" placeholder="Please enter your name" name="username">
+                <input type="submit" value="save" placeholder="Save">
+                </form>
             </div>
-            <div class="popup-footer">
-                <button class="btn home-btn">Homepage</button>
-                <button class="btn" id="restart">ReMatch</button>
-                <button class="btn leaderboard" id="results-league-table">League Table</button>
-            </div>
+        </div>
+        <div class="popup-footer">
+            <button class="btn home-btn">Homepage</button>
+            <button class="btn" id="restart">ReMatch</button>
+            <button class="btn leaderboard" id="results-league-table">League Table</button>
+        </div>
         </div>
     </section>
     <section class="main" id="rules-section">

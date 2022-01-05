@@ -60,7 +60,8 @@ h2 {
     height: 100%;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
     text-decoration: underline #ffffff;
     text-decoration-thickness: 2px;
 }
@@ -186,7 +187,7 @@ h2 {
     position: absolute;
     z-index: 1;
     overflow: auto;
-    width: 100%; 
+    width: 100%;
     left: 0;
     top: 4rem;
     display: none;
@@ -217,7 +218,7 @@ h2 {
     position: absolute;
     z-index: 1;
     overflow: auto;
-    width: 100%; 
+    width: 100%;
     left: 0;
     top: 4rem;
     display: none;
@@ -246,4 +247,14 @@ h2 {
     font-size: 150%;
     height: 40vh;
     padding-top: 1rem;
+}
+
+#results-section {
+    position: absolute;
+    z-index: 1;
+    overflow: auto;
+    width: 100%;
+    left: 0;
+    top: 4rem;
+    display: block;
 }
