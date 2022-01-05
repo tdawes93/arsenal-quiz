@@ -17,6 +17,8 @@ body {
     background-color: #F1F2F3;
 }
 
+/*Heading and main buttons*/
+
 h1,
 h2 {
     text-transform: uppercase;
@@ -26,13 +28,6 @@ h2 {
     background: #ef0001;
     color: #ffffff;
     padding: 1rem;
-}
-
-.popup-header {
-    border-top: #ef0001 solid;
-    background-color: #172030;
-    color: #ffffff;
-    padding: 0.5rem;
 }
 
 .controls {
@@ -54,20 +49,6 @@ h2 {
 
 .leaderboard {
     width: 35%;
-}
-
-.popup-content {
-    background: #ffffff;
-    border-top: #ef0001 solid;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-}
-
-.popup-footer {
-    background-color: #ef0001;
-    border-top: #172030 solid;
-    padding: 0.5rem;
-    text-align: center;
 }
 
 .btn {
@@ -113,6 +94,29 @@ h2 {
     vertical-align: middle;
 }
 
+/*Modal styles*/
+.popup-header {
+    border-top: #ef0001 solid;
+    background-color: #172030;
+    color: #ffffff;
+    padding: 0.5rem;
+}
+
+.popup-content {
+    background: #ffffff;
+    border-top: #ef0001 solid;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.popup-footer {
+    background-color: #ef0001;
+    border-top: #172030 solid;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/*Main Quiz Section*/
 #quiz-container {
     height: 85vh;
     display: none;
@@ -177,6 +181,7 @@ h2 {
     vertical-align: middle;
 }
 
+/*League Table Section*/
 #league-table-section {
     position: absolute;
     z-index: 1;
@@ -207,6 +212,7 @@ h2 {
     border-left: #F1F2F3 solid;
 }
 
+/*Rules Section*/
 #rules-section {
     position: absolute;
     z-index: 1;
@@ -227,16 +233,7 @@ h2 {
     text-indent: -1.3rem;
 }
 
-#results-section {
-    position: absolute;
-    z-index: 1;
-    overflow: auto;
-    width: 100%; 
-    left: 0;
-    top: 4rem;
-    display: none;
-}
-
+/*Results Section*/
 #results-box {
     margin-bottom: 1.5rem;
     text-align: center;
