@@ -45,6 +45,8 @@ const questions = [{
 
 //Variables for quiz game
 let i = 0;
+let score = 0;
+let correctPoints = 1;
 
 
 /**
@@ -77,25 +79,19 @@ quizContainer.addEventListener("click", function (e) {
     console.log(e);
     console.log(e.target);
     if (e.target && e.target.matches(`button#${questions[i].correctAnswer}`)) {
-        e.target.style.backgroundColor = "green";
+        e.target.classList.add("correct-ans");
         i++;
+        correctScore(correctPoints);
     } else {
-        e.target.style.backgroundColor = "red";
-        document.getElementById(`${questions[i].correctAnswer}`).style.backgroundColor = "green";
+        e.target.classList.add("incorrect-ans");
+        document.getElementById(`${questions[i].correctAnswer}`).classList.add("correct-ans");
         i++;
     }
+
 });
 
-function calculateScore() {
-    let score = 0;
-    let numberOfQuestions = 0;
-    if (selectedAnswer === questions[i].correctAnswer) {
-        score = +1;
-        numberOfQuestions = +1;
-    } else {
-        score = score;
-        numberOfQuestions = +1;
-    }
+function correctScore(num) {
+    score = +num;
 };
 
 function finishQuiz() {};

@@ -146,6 +146,16 @@ h2 {
     border-radius: 0.5rem;
 }
 
+.correct-ans {
+    background-color: green;
+    transition: 0.8s;
+}
+
+.incorrect-ans {
+    background-color: #ef0001;
+    transition: 0.8s;
+}
+
 #a {
     width: 100%;
 }
