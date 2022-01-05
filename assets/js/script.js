@@ -87,12 +87,25 @@ quizContainer.addEventListener("click", function (e) {
         document.getElementById(`${questions[i].correctAnswer}`).classList.add("correct-ans");
         i++;
     }
+    setTimeout(function resetGame() {
+        e.target.classList.remove("correct-ans");
+        e.target.classList.remove("incorrect-ans");
+        document.getElementById(`${questions[i].correctAnswer}`).classList.remove("correct-ans");
+        buildQuiz;
+    }, 1000);
 
 });
 
 function correctScore(num) {
     score = +num;
 };
+
+function resetGame() {
+    e.target.classList.remove("correct-ans");
+    e.target.classList.remove("incorrect-ans");
+    document.getElementById(`${questions[i].correctAnswer}`).classList.remove("correct-ans");
+    buildQuiz;
+}
 
 function finishQuiz() {};
 
