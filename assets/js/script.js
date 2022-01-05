@@ -21,12 +21,12 @@ const questions = [{
         correctAnswer: "a"
     },
     {
-        question: "...",
+        question: "Who is Arsenal's all time top scorer?",
         answers: {
-            a: "...",
-            b: "....",
-            c: ".....",
-            d: ".."
+            a: "Ian Wright",
+            b: "Thierry Henry",
+            c: "Cliff Bastin",
+            d: "Robin Van Persie"
         },
         correctAnswer: "b"
     },
@@ -80,20 +80,18 @@ quizContainer.addEventListener("click", function (e) {
     console.log(e.target);
     if (e.target && e.target.matches(`button#${questions[i].correctAnswer}`)) {
         e.target.classList.add("correct-ans");
-        i++;
         correctScore(correctPoints);
     } else {
         e.target.classList.add("incorrect-ans");
         document.getElementById(`${questions[i].correctAnswer}`).classList.add("correct-ans");
-        i++;
     }
     setTimeout(function resetGame() {
         e.target.classList.remove("correct-ans");
         e.target.classList.remove("incorrect-ans");
         document.getElementById(`${questions[i].correctAnswer}`).classList.remove("correct-ans");
-        buildQuiz;
+        i++
+        buildQuiz();
     }, 1000);
-
 });
 
 function correctScore(num) {
