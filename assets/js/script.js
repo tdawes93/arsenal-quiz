@@ -145,19 +145,26 @@ function buildQuiz() {
 </div>`;
 }
 
+/**
+ * This function compares the selected answer with the correct answer
+ */
 quizContainer.addEventListener("click", function (e) {
     console.log(e);
     console.log(e.target);
+    //Change color of buttons when answer selected
     if (e.target && e.target.matches(`button#${questions[i].correctAnswer}`)) {
         e.target.classList.add("correct-ans");
+        //Increase score if answer correct
         correctScore(correctPoints);
     } else {
         e.target.classList.add("incorrect-ans");
         document.getElementById(`${questions[i].correctAnswer}`).classList.add("correct-ans");
     }
+    //Finish quiz after 10th question
     if (i >= 9) {
         finishQuiz();
     } else {
+        //Reset game and run next question
         setTimeout(function resetGame() {
             e.target.classList.remove("correct-ans");
             e.target.classList.remove("incorrect-ans");
