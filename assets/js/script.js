@@ -8,7 +8,7 @@ const rulesModal = document.getElementById("rules-section");
 const leagueTableBtn = document.getElementsByClassName("leaderboard");
 const leagueTableModal = document.getElementById("league-table-section");
 const rematchBtn = document.getElementById("restart");
-const answers = document.getElementsByClassName("answer-option");
+const resultsModal = document.getElementById("results-section");
 
 const questions = [{
         question: "How many games did arsenal go unbeaten when they won the invincibles season?",
@@ -123,6 +123,7 @@ let correctPoints = 1;
  * This function pulls up new questions. Called when the user presses 'kick-off' and then subsequently after each answer is selected
  */
 function buildQuiz() {
+    quizContainer.style.display = "block";
     quizContainer.innerHTML = `<div id="question-count">
     <h2 id="question-progress">${i+1}/10</h2>
 </div>
@@ -186,7 +187,10 @@ function resetGame() {
     buildQuiz;
 }
 
-function finishQuiz() {};
+function finishQuiz() {
+    quizContainer.style.display = "none";
+    resultsModal.style.display = "block";
+};
 
 function displayScore() {};
 
