@@ -116,7 +116,7 @@ const questions = [{
 //Variables for quiz game
 let i = 0;
 let score = 0;
-let correctPoints = 1;
+let pointValue = 1;
 
 
 /**
@@ -156,7 +156,7 @@ quizContainer.addEventListener("click", function (e) {
     if (e.target && e.target.matches(`button#${questions[i].correctAnswer}`)) {
         e.target.classList.add("correct-ans");
         //Increase score if answer correct
-        correctScore(correctPoints);
+        correctScore(pointValue);
     } else {
         e.target.classList.add("incorrect-ans");
         document.getElementById(`${questions[i].correctAnswer}`).classList.add("correct-ans");
@@ -177,7 +177,7 @@ quizContainer.addEventListener("click", function (e) {
 });
 
 function correctScore(num) {
-    score = +num;
+    score = score + num;
 };
 
 function finishQuiz() {
@@ -187,7 +187,7 @@ function finishQuiz() {
 
 function rematch(event) {
     i = 0;
-    resultsModal.style.display ="none";
+    resultsModal.style.display = "none";
     buildQuiz();
 }
 
