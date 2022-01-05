@@ -31,12 +31,82 @@ const questions = [{
         correctAnswer: "b"
     },
     {
-        question: "...",
+        question: "In which season did Arsenal first compete in a European competition?",
         answers: {
-            a: "...",
-            b: "....",
-            c: ".....",
-            d: ".."
+            a: "1967/68",
+            b: "1968/69",
+            c: "1962/63",
+            d: "1963/64"
+        },
+        correctAnswer: "d"
+    },
+    {
+        question: "On March 12, 1900, Arsenal set a record by beating Loughborough Town. What was the score?",
+        answers: {
+            a: "9-0",
+            b: "11-1",
+            c: "12-0",
+            d: "8-0"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "Who were Arsenal sponsored by in the 2000-01 season?",
+        answers: {
+            a: "JVC",
+            b: "Dreamcast",
+            c: "o2",
+            d: "Emirates"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "Which Frenchman was Wenger's first signing as the manager of Arsenal?",
+        answers: {
+            a: "Gilles Grimandi",
+            b: "Patrick Vieira",
+            c: "Nicolas Anelka",
+            d: "Emmanuel Petit"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "Which player score the winning goal to win the title in the last minute at Anfield 1989?",
+        answers: {
+            a: "Paul Merson",
+            b: "Alan Smith",
+            c: "Michael Thomas",
+            d: "Niall Quinn"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "Which player scored the first Premier League goal for Arsenal at the Emirates Stadium?",
+        answers: {
+            a: "Emmanuel Adebayor",
+            b: "Gilberto",
+            c: "Cesc Fabregas",
+            d: "Thierry Henry"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "How many times have Arsenal won the FA Cup?",
+        answers: {
+            a: "14",
+            b: "9",
+            c: "11",
+            d: "15"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "What ground did Arsenal first play at, in 1885?",
+        answers: {
+            a: "Sportsman Ground",
+            b: "Manor Ground",
+            c: "Invicta Ground",
+            d: "Plumstead Common"
         },
         correctAnswer: "d"
     }
@@ -85,13 +155,17 @@ quizContainer.addEventListener("click", function (e) {
         e.target.classList.add("incorrect-ans");
         document.getElementById(`${questions[i].correctAnswer}`).classList.add("correct-ans");
     }
-    setTimeout(function resetGame() {
-        e.target.classList.remove("correct-ans");
-        e.target.classList.remove("incorrect-ans");
-        document.getElementById(`${questions[i].correctAnswer}`).classList.remove("correct-ans");
-        i++
-        buildQuiz();
-    }, 1000);
+    if (i >= 9) {
+        finishQuiz();
+    } else {
+        setTimeout(function resetGame() {
+            e.target.classList.remove("correct-ans");
+            e.target.classList.remove("incorrect-ans");
+            document.getElementById(`${questions[i].correctAnswer}`).classList.remove("correct-ans");
+            i++
+            buildQuiz();
+        }, 1000);
+    }
 });
 
 function correctScore(num) {
