@@ -235,6 +235,10 @@ h2 {
 }
 
 /*Results Section*/
+#results-container {
+    border: #172030 solid;
+}
+
 #results-box {
     margin-bottom: 1.5rem;
     text-align: center;
@@ -256,7 +260,7 @@ h2 {
     width: 100%;
     left: 0;
     top: 4rem;
-    display: block;
+    display: none;
 }
 
 #name-entry {

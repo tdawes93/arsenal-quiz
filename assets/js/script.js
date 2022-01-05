@@ -10,6 +10,8 @@ const leagueTableModal = document.getElementById("league-table-section");
 const rematchBtn = document.getElementById("restart");
 const resultsModal = document.getElementById("results-section");
 const scoreBox = document.getElementById("score-box");
+const homeBtn = document.getElementById("home-btn");
+const saveScoreBtn = document.getElementById("save-btn");
 
 const questions = [{
         question: "How many games did arsenal go unbeaten when they won the invincibles season?",
@@ -117,8 +119,7 @@ const questions = [{
 //Variables for quiz game
 let i = 0;
 let score = 0;
-/*let pointValue = 1;*/
-
+let leagueTable = [];
 
 /**
  * This function pulls up new questions. Called when the user presses 'kick-off' and then subsequently after each answer is selected
@@ -196,13 +197,13 @@ function displayScore() {
                 <div id="results-box">
                     <p id="results-content">You're a Tottenham fan in disguise!</p>
                 </div>`;
-    } else if (2 < score <= 5) {
+    } else if (score <= 5) {
         scoreBox.innerHTML = `
     <h3>You Scored: ${score}/${i+1}</h3>
                 <div id="results-box">
                     <p id="results-content">You're a glory supporter! You know who Henry is but don't know your Pat Rice's from your Nigel Winterburn's!</p>
                 </div>`;
-    } else if (5 < score <= 8) {
+    } else if (score <= 8) {
         scoreBox.innerHTML = `
     <h3>You Scored: ${score}/${i+1}</h3>
                 <div id="results-box">
@@ -217,9 +218,14 @@ function displayScore() {
     }
 };
 
-function saveScore() {};
+function saveScore(event) {
+    let nameEntry = document.getElementById("name-entry").value;
+    let leagueTableEntry = [nameEntry, score];
+    leagueTable = leagueTableEntry.push;
+    document.getElementById("league-table-list").innerHTML = ``
+};
 
-function returnHome() {
+function returnHome(event) {
     home.style.display = "block";
     quizContainer.style.display = "none";
     resultsModal.style.display = "none";
@@ -240,9 +246,13 @@ function back(event) {
 
 //Event Listeners//
 
+homeBtn.addEventListener("click", returnHome);
+
 playBtn.addEventListener("click", buildQuiz);
 
 rulesBtn.addEventListener("click", displayRules);
+
+saveScoreBtn.addEventListener("click", saveScore);
 
 for (let i = 0; i < leagueTableBtn.length; i++) {
     leagueTableBtn[i].addEventListener("click", displayLeagueTable);
