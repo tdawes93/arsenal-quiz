@@ -163,7 +163,7 @@ quizContainer.addEventListener("click", function (e) {
     }
     //Finish quiz after 10th question
     if (i >= 9) {
-        finishQuiz();
+        setTimeout(finishQuiz());
     } else {
         //Reset game and run next question
         setTimeout(function resetGame() {
@@ -180,17 +180,16 @@ function correctScore(num) {
     score = +num;
 };
 
-function resetGame() {
-    e.target.classList.remove("correct-ans");
-    e.target.classList.remove("incorrect-ans");
-    document.getElementById(`${questions[i].correctAnswer}`).classList.remove("correct-ans");
-    buildQuiz;
-}
-
 function finishQuiz() {
     quizContainer.style.display = "none";
     resultsModal.style.display = "block";
 };
+
+function rematch(event) {
+    i = 0;
+    resultsModal.style.display ="none";
+    buildQuiz();
+}
 
 function displayScore() {};
 
@@ -228,3 +227,5 @@ for (let i = 0; i < leagueTableBtn.length; i++) {
 for (let i = 0; i < backBtn.length; i++) {
     backBtn[i].addEventListener("click", back);
 }
+
+rematchBtn.addEventListener("click", rematch);
