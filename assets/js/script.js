@@ -155,8 +155,6 @@ function buildQuiz() {
  * This function compares the selected answer with the correct answer
  */
 quizContainer.addEventListener("click", function (e) {
-    console.log(e);
-    console.log(e.target);
     //Change color of buttons when answer selected
     if (e.target && e.target.matches(`button#${questions[i].correctAnswer}`)) {
         e.target.classList.add("correct-ans");
@@ -190,6 +188,7 @@ function finishQuiz() {
 
 function rematch(event) {
     i = 0;
+    score = 0;
     resultsModal.style.display = "none";
     buildQuiz();
 }
@@ -234,7 +233,10 @@ function saveScore(event) {
     })
     highscores.splice(MAX_HIGH_SCORES);
     localStorage.setItem("highscores", JSON.stringify(highscores));
-    console.log(highscores);
+    tableBody.innerHTML = highscores.map(score => {
+        return `<tr><td></td><td>${score.player}</td><td>${score.score}</td></tr>`
+    }).join("");
+    displayLeagueTable();
 }
 
 function returnHome(event) {
@@ -249,6 +251,7 @@ function displayRules(event) {
 
 function displayLeagueTable(event) {
     leagueTableModal.style.display = "block";
+    resultsModal.style.display = "none";
 }
 
 function back(event) {
