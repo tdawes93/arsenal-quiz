@@ -1,3 +1,9 @@
+https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw - James Q Quick reference for code
+
+https://davidwalsh.name/event-delegate - David Walsh for code reference
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome tdawes93,

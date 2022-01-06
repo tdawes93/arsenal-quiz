@@ -58,6 +58,7 @@ h2 {
     text-transform: uppercase;
     font-weight: 700;
     height: 100%;
+    cursor: pointer;
 }
 
 .btn:hover,
@@ -136,8 +137,8 @@ h2 {
     align-items: center;
     background: url(/assets/images/henry-celebration.jpg) no-repeat center center/cover;
     color: #ffffff;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-    font-size: 150%;
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+    font-size: 175%;
 }
 
 #answers-box {
@@ -150,6 +151,7 @@ h2 {
     display: block;
     border: solid;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .correct-ans {

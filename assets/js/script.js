@@ -154,6 +154,7 @@ function buildQuiz() {
 /**
  * This function compares the selected answer with the correct answer
  */
+//Reference some of this code to David Walsh
 quizContainer.addEventListener("click", function (e) {
     //Change color of buttons when answer selected
     if (e.target && e.target.matches(`button#${questions[i].correctAnswer}`)) {
@@ -221,6 +222,7 @@ function displayScore() {
     }
 };
 
+//Reference some of this code to James
 function saveScore(event) {
     event.preventDefault();
     let leagueTableEntry = {
@@ -231,6 +233,9 @@ function saveScore(event) {
     highscores.sort((a, b) => {
         return b.score - a.score;
     })
+    for (i = 0; i < highscores.length; i++) {
+        highscores[i].pos = i + 1;
+    }
     highscores.splice(MAX_HIGH_SCORES);
     localStorage.setItem("highscores", JSON.stringify(highscores));
     appendScores();
@@ -238,9 +243,10 @@ function saveScore(event) {
     displayLeagueTable();
 }
 
+//Reference this code to James
 function appendScores() {
     tableBody.innerHTML = highscores.map(score => {
-        return `<tr><td></td><td class="league-table-mid-col">${score.player}</td><td>${score.score}</td></tr>`
+        return `<tr><td>${score.pos}</td><td class="league-table-mid-col">${score.player}</td><td>${score.score}</td></tr>`
     }).join("");
 }
 
