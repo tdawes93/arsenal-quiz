@@ -119,9 +119,10 @@ const questions = [{
 
 
 //Variables for quiz game
+const MAX_HIGH_SCORES = 20;
 let i = 0;
 let score = 0;
-let leagueTableArr = [];
+const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
 
 /**
  * This function pulls up new questions. Called when the user presses 'kick-off' and then subsequently after each answer is selected
@@ -184,7 +185,8 @@ function finishQuiz() {
     quizContainer.style.display = "none";
     resultsModal.style.display = "block";
     displayScore();
-};
+    localStorage.setItem("mostRecentScore", score);
+}
 
 function rematch(event) {
     i = 0;
@@ -218,36 +220,28 @@ function displayScore() {
                     <p id="results-content">You a bleed red and white! You've followed arsenal through unbeaten seasons and league cup final losses</p>
                 </div>`
     }
-    const mostRecentScore = localStorage.score;
 };
-
-function enableSaveScore (event) {
-    if (username.value == false) {
-    saveScoreBtn.disabled;
-    }
-}
 
 function saveScore(event) {
     event.preventDefault();
-    let nameEntry = document.getElementById("name-entry").value;
-    let leagueTableEntry = [nameEntry, score];
-    leagueTableArr = leagueTableEntry.push;
-    console.log(leagueTableArr);
-    /*for (let row of leagueTableArr) {
-        tableBody.insertRow();
-        for (let cell of row) {
-            let newCell = tableBody.rows[tableBody.rows.length-1].insertCell();
-            newCell.textContent = cell;
-        }
-    }
-    displayLeagueTable();*/
-};
+    let leagueTableEntry = {
+        player: username.value,
+        score: score
+    };
+    highscores.push(leagueTableEntry);
+    highscores.sort((a, b) => {
+        return b.score - a.score;
+    })
+    highscores.splice(MAX_HIGH_SCORES);
+    localStorage.setItem("highscores", JSON.stringify(highscores));
+    console.log(highscores);
+}
 
 function returnHome(event) {
     home.style.display = "block";
     quizContainer.style.display = "none";
     resultsModal.style.display = "none";
-};
+}
 
 function displayRules(event) {
     rulesModal.style.display = "block";
@@ -273,6 +267,10 @@ playBtn.addEventListener("click", buildQuiz);
 rulesBtn.addEventListener("click", displayRules);
 
 saveScoreBtn.addEventListener("click", saveScore);
+
+username.addEventListener("keyup", () => {
+    saveScoreBtn.disabled = !username.value;
+})
 
 for (let i = 0; i < leagueTableBtn.length; i++) {
     leagueTableBtn[i].addEventListener("click", displayLeagueTable);
