@@ -17,6 +17,21 @@ body {
     background-color: #F1F2F3;
 }
 
+.footer {
+    position: fixed;
+    background-color: #ef0001;
+    color: #ffffff;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 3rem;
+    border-top: #172030 solid;
+    text-align: center;
+    display: block;
+    padding: 0.7rem 0;
+}
+
+
 /*Heading and main buttons*/
 
 h1,
@@ -40,15 +55,15 @@ h2 {
 }
 
 #kick-off {
-    width: 25%;
+    width: 30%;
 }
 
 #rules {
-    width: 25%;
+    width: 30%;
 }
 
 .leaderboard {
-    width: 35%;
+    width: 30%;
 }
 
 .btn {
@@ -59,6 +74,7 @@ h2 {
     font-weight: 700;
     height: 100%;
     cursor: pointer;
+    display: inline-block;   
 }
 
 .btn:hover,
@@ -68,7 +84,7 @@ h2 {
 }
 
 .home-btn {
-    width: 25%;
+    width: 30%;
 }
 
 .back-btn {
@@ -102,6 +118,7 @@ h2 {
     background-color: #172030;
     color: #ffffff;
     padding: 0.5rem;
+    position: relative;
 }
 
 .popup-content {
@@ -120,7 +137,7 @@ h2 {
 
 /*Main Quiz Section*/
 #quiz-container {
-    height: 85vh;
+    height: auto;
     display: none;
 }
 
@@ -129,7 +146,7 @@ h2 {
 }
 
 #questions-box {
-    height: 25%;
+    height: 50vh;
     margin-bottom: 1.5rem;
     text-align: center;
     display: flex;
@@ -138,7 +155,11 @@ h2 {
     background: url(/assets/images/henry-celebration.jpg) no-repeat center center/cover;
     color: #ffffff;
     text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
-    font-size: 175%;
+    font-size: 200%;
+}
+
+#question {
+    padding: 0 0.5rem;
 }
 
 #answers-box {
@@ -152,6 +173,7 @@ h2 {
     border: solid;
     border-radius: 0.5rem;
     cursor: pointer;
+    font-size: 125%;
 }
 
 .correct-ans {
@@ -255,8 +277,8 @@ td {
     background: url(/assets/images/henry-celebration.jpg) no-repeat center center/cover;
     color: #ffffff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-    font-size: 150%;
-    height: 40vh;
+    font-size: 200%;
+    height: 50vh;
     padding-top: 1rem;
 }
 
