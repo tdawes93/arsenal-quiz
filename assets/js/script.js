@@ -236,6 +236,7 @@ function saveScore(event) {
     tableBody.innerHTML = highscores.map(score => {
         return `<tr><td></td><td>${score.player}</td><td>${score.score}</td></tr>`
     }).join("");
+    i = 0;
     displayLeagueTable();
 }
 
@@ -275,12 +276,12 @@ username.addEventListener("keyup", () => {
     saveScoreBtn.disabled = !username.value;
 })
 
-for (let i = 0; i < leagueTableBtn.length; i++) {
-    leagueTableBtn[i].addEventListener("click", displayLeagueTable);
+for (let x = 0; x < leagueTableBtn.length; x++) {
+    leagueTableBtn[x].addEventListener("click", displayLeagueTable);
 }
 
-for (let i = 0; i < backBtn.length; i++) {
-    backBtn[i].addEventListener("click", back);
+for (let x = 0; x < backBtn.length; x++) {
+    backBtn[x].addEventListener("click", back);
 }
 
 rematchBtn.addEventListener("click", rematch);
