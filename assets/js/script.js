@@ -12,6 +12,8 @@ const resultsModal = document.getElementById("results-section");
 const scoreBox = document.getElementById("score-box");
 const homeBtn = document.getElementById("home-btn");
 const saveScoreBtn = document.getElementById("save-btn");
+const tableBody = document.getElementById("league-table-list");
+const username = document.getElementById("name-entry");
 
 const questions = [{
         question: "How many games did arsenal go unbeaten when they won the invincibles season?",
@@ -119,7 +121,7 @@ const questions = [{
 //Variables for quiz game
 let i = 0;
 let score = 0;
-let leagueTable = [];
+let leagueTableArr = [];
 
 /**
  * This function pulls up new questions. Called when the user presses 'kick-off' and then subsequently after each answer is selected
@@ -165,7 +167,7 @@ quizContainer.addEventListener("click", function (e) {
     }
     //Finish quiz after 10th question
     if (i >= 9) {
-        setTimeout(finishQuiz());
+        finishQuiz();
     } else {
         //Reset game and run next question
         setTimeout(function resetGame() {
@@ -216,13 +218,29 @@ function displayScore() {
                     <p id="results-content">You a bleed red and white! You've followed arsenal through unbeaten seasons and league cup final losses</p>
                 </div>`
     }
+    const mostRecentScore = localStorage.score;
 };
 
+function enableSaveScore (event) {
+    if (username.value == false) {
+    saveScoreBtn.disabled;
+    }
+}
+
 function saveScore(event) {
+    event.preventDefault();
     let nameEntry = document.getElementById("name-entry").value;
     let leagueTableEntry = [nameEntry, score];
-    leagueTable = leagueTableEntry.push;
-    document.getElementById("league-table-list").innerHTML = ``
+    leagueTableArr = leagueTableEntry.push;
+    console.log(leagueTableArr);
+    /*for (let row of leagueTableArr) {
+        tableBody.insertRow();
+        for (let cell of row) {
+            let newCell = tableBody.rows[tableBody.rows.length-1].insertCell();
+            newCell.textContent = cell;
+        }
+    }
+    displayLeagueTable();*/
 };
 
 function returnHome(event) {
@@ -245,6 +263,8 @@ function back(event) {
 }
 
 //Event Listeners//
+
+username.addEventListener("keyup", saveScoreBtn)
 
 homeBtn.addEventListener("click", returnHome);
 
