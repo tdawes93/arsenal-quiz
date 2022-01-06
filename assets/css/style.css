@@ -202,6 +202,7 @@ h2 {
     border-spacing: 0;
     background-color: #ffffff;
     border-collapse: collapse;
+    font-size: large;
 }
 
 #league-table thead {
@@ -211,6 +212,10 @@ h2 {
 .league-table-mid-col {
     border-right: #F1F2F3 solid;
     border-left: #F1F2F3 solid;
+}
+
+td {
+    text-align: center;
 }
 
 /*Rules Section*/

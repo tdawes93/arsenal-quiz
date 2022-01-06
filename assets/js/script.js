@@ -233,11 +233,15 @@ function saveScore(event) {
     })
     highscores.splice(MAX_HIGH_SCORES);
     localStorage.setItem("highscores", JSON.stringify(highscores));
-    tableBody.innerHTML = highscores.map(score => {
-        return `<tr><td></td><td>${score.player}</td><td>${score.score}</td></tr>`
-    }).join("");
+    appendScores();
     i = 0;
     displayLeagueTable();
+}
+
+function appendScores() {
+    tableBody.innerHTML = highscores.map(score => {
+        return `<tr><td></td><td class="league-table-mid-col">${score.player}</td><td>${score.score}</td></tr>`
+    }).join("");
 }
 
 function returnHome(event) {
@@ -251,6 +255,7 @@ function displayRules(event) {
 }
 
 function displayLeagueTable(event) {
+    appendScores();
     leagueTableModal.style.display = "block";
     resultsModal.style.display = "none";
 }
