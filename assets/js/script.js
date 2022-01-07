@@ -15,7 +15,7 @@ const username = document.getElementById("name-entry");
 const ansOption = document.getElementsByClassName("answer-option");
 
 const questions = [{
-        question: "How many games did arsenal go unbeaten when they won the invincibles season?",
+        question: "How many games did Arsenal go unbeaten when they won the invincibles season?",
         answers: {
             a: "49",
             b: "56",
@@ -75,7 +75,7 @@ const questions = [{
         correctAnswer: "c"
     },
     {
-        question: "Which player score the winning goal to win the title in the last minute at Anfield 1989?",
+        question: "Which player scored the winning goal to win the title in the last minute at Anfield 1989?",
         answers: {
             a: "Paul Merson",
             b: "Alan Smith",
@@ -170,6 +170,7 @@ function finishQuiz() {
     resultsModal.style.display = "block";
     displayScore();
     localStorage.setItem("mostRecentScore", score);
+    i = 0;
 }
 
 function rematch(event) {
