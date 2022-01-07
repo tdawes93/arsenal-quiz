@@ -32,7 +32,8 @@ body {
     padding: 0.7rem 0;
 }
 
-.footer p, footer a {
+.footer p,
+footer a {
     display: inline-block;
     width: auto;
     color: #ffffff;
@@ -81,7 +82,7 @@ h2 {
     font-weight: 700;
     height: 100%;
     cursor: pointer;
-    display: inline-block;   
+    display: inline-block;
 }
 
 .btn:hover,
@@ -324,4 +325,56 @@ td {
     padding: 0.5rem 0;
     margin-top: 0.5rem;
     border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 425px) {
+    #league-table-section {
+        top: 6rem;
+    }    
+}
+
+@media screen and (min-width: 550px) {
+    #league-table-section {
+        top: 7rem;
+    }    
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        width: 70vw;
+        margin: 0 auto 4rem;
+    }
+
+    .footer {
+        height: 4rem;
+    }
+
+    #league-table {
+        font-size: 150%;
+    }
+
+    #league-table-section {
+        top: 8.5rem;
+    }  
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 150%;
+    }
+
+    .btn {
+        font-size: 100%;
+    }
+
+    #league-table-section {
+        top: 10rem;
+    }  
+}
+
+@media screen and (min-width:1200px) {
+    #league-table-section {
+        top: 11rem;
+    } 
+    
 }

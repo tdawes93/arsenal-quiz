@@ -129,26 +129,29 @@ const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
  */
 function buildQuiz() {
     quizContainer.style.display = "block";
-    quizContainer.innerHTML = `<div id="question-count">
-    <h2 id="question-progress">${i+1}/10</h2>
-</div>
-<div id="questions-box">
-    <p id="question">${questions[i].question}</p>
-</div>
-<div id="answers-box">
-    <button value="a" class="answer-option" id="a">
-        ${questions[i].answers.a}
-    </button>
-    <button value="b" class="answer-option" id="b">
-        ${questions[i].answers.b}
-    </button>
-    <button value="c" class="answer-option" id="c">
-        ${questions[i].answers.c}
-    </button>
-    <button value="d" class="answer-option" id="d">
-        ${questions[i].answers.d}
-    </button>
-</div>`;
+    quizContainer.innerHTML =
+        `<div class="popup-header"  id="question-count">
+        <h2 id="question-progress">${i+1}/10</h2>
+    </div>
+    <div class="popup-content">
+        <div id="questions-box">
+            <p id="question">${questions[i].question}</p>
+        </div>
+        <div id="answers-box">
+            <button value="a" class="answer-option" id="a">
+            ${questions[i].answers.a}
+            </button>
+            <button value="b" class="answer-option" id="b">
+            ${questions[i].answers.b}
+            </button>
+            <button value="c" class="answer-option" id="c">
+            ${questions[i].answers.c}
+            </button>
+            <button value="d" class="answer-option" id="d">
+            ${questions[i].answers.d}
+            </button>
+        </div>
+    </div>`;
 }
 
 /**
