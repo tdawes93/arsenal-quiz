@@ -152,6 +152,9 @@ function checkAnswer(e) {
     }
     //Finish quiz after 10th question
     if (i >= 9) {
+        e.target.classList.remove("correct-ans");
+        e.target.classList.remove("incorrect-ans");
+        document.getElementById(`${questions[i].correctAnswer}`).classList.remove("correct-ans");
         finishQuiz();
     } else {
         //Reset game and run next question
@@ -171,6 +174,7 @@ function finishQuiz() {
     displayScore();
     localStorage.setItem("mostRecentScore", score);
     i = 0;
+    score = 0;
 }
 
 function rematch(event) {
