@@ -189,7 +189,7 @@ function displayScore() {
     } else if (score <= 5) {
         scoreBox.innerHTML = `
     <h3>You Scored: ${score}/${i+1}</h3>
-                <div class="results-box" id=result-glory"">
+                <div class="results-box" id="result-glory">
                     <p id="results-content">You're a glory supporter! You know who Henry is but don't know your Pat Rice's from your Nigel Winterburn's!</p>
                 </div>`;
     } else if (score <= 8) {

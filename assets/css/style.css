@@ -10,6 +10,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
+    width: 100%
 }
 
 .main {
@@ -161,7 +162,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(../images/henry-celebration.jpg) no-repeat center center/cover;
+    background: url(../images/henry.jpg) no-repeat center center/cover;
     color: #ffffff;
     text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
     font-size: 200%;
@@ -294,14 +295,16 @@ td {
     background: url(../images/tottenham-fan.jpg) no-repeat center center/cover;
 }
 
-#result-glory {}
+#result-glory {
+    background: url(../images/xhaka-card.jpg) no-repeat center center/cover;
+}
 
 #result-true-gunner {
     background: url(../images/emirates-stadium.jpg) no-repeat center center/cover;
 }
 
 #result-winner {
-
+    background: url(../images/invincibles.jpg) no-repeat center center/cover;
 }
 #results-section {
     position: absolute;
@@ -340,13 +343,13 @@ td {
 }
 
 @media screen and (min-width: 425px) {
-    #league-table-section {
+    #league-table-section, #results-section {
         top: 6rem;
     }    
 }
 
 @media screen and (min-width: 550px) {
-    #league-table-section {
+    #league-table-section, #results-section {
         top: 7rem;
     }    
 }
@@ -365,8 +368,12 @@ td {
         font-size: 150%;
     }
 
-    #league-table-section {
+    #league-table-section, #results-section, #rules-section {
         top: 8.5rem;
+        position: absolute;
+        width: 70vw;
+        margin-left: 15vw;
+        padding: 0;
     }  
 }
 
@@ -379,14 +386,19 @@ td {
         font-size: 100%;
     }
 
-    #league-table-section {
+    #league-table-section, #results-section, #rules-section {
         top: 10rem;
+        width: 70vw;
+        margin-left: 15vw;
+        padding: 0;
     }  
 }
 
 @media screen and (min-width:1200px) {
-    #league-table-section {
+    #league-table-section, #results-section, #rules-section {
         top: 11rem;
-    } 
-    
+        width: 70vw;
+        margin-left: 15vw;
+        padding: 0;
+    }    
 }
