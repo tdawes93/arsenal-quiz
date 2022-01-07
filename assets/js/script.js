@@ -164,7 +164,7 @@ function checkAnswer(e) {
             document.getElementById(`${questions[i].correctAnswer}`).classList.remove("correct-ans");
             i++
             buildQuiz();
-        }, 1000);
+        }, 1500);
     }
 };
 
@@ -174,7 +174,6 @@ function finishQuiz() {
     displayScore();
     localStorage.setItem("mostRecentScore", score);
     i = 0;
-    score = 0;
 }
 
 function rematch(event) {
@@ -231,6 +230,7 @@ function saveScore(event) {
     appendScores();
     i = 0;
     displayLeagueTable();
+    score = 0;
 }
 
 //Reference this code to James
