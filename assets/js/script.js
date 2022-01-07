@@ -1,5 +1,3 @@
-/*
-const playButton = document.getElementById("kick-off");*/
 const quizContainer = document.getElementById("quiz-container");
 const playBtn = document.getElementById("kick-off");
 const rulesBtn = document.getElementById("rules");
@@ -14,6 +12,7 @@ const homeBtn = document.getElementById("home-btn");
 const saveScoreBtn = document.getElementById("save-btn");
 const tableBody = document.getElementById("league-table-list");
 const username = document.getElementById("name-entry");
+const ansOption = document.getElementsByClassName("answer-option");
 
 const questions = [{
         question: "How many games did arsenal go unbeaten when they won the invincibles season?",
@@ -127,40 +126,23 @@ const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
 /**
  * This function pulls up new questions. Called when the user presses 'kick-off' and then subsequently after each answer is selected
  */
-function buildQuiz() {
+function buildQuiz(event) {
     quizContainer.style.display = "block";
-    quizContainer.innerHTML =
-        `<div class="popup-header"  id="question-count">
-        <h2 id="question-progress">${i+1}/10</h2>
-    </div>
-    <div class="popup-content">
-        <div id="questions-box">
-            <p id="question">${questions[i].question}</p>
-        </div>
-        <div id="answers-box">
-            <button value="a" class="answer-option" id="a">
-            ${questions[i].answers.a}
-            </button>
-            <button value="b" class="answer-option" id="b">
-            ${questions[i].answers.b}
-            </button>
-            <button value="c" class="answer-option" id="c">
-            ${questions[i].answers.c}
-            </button>
-            <button value="d" class="answer-option" id="d">
-            ${questions[i].answers.d}
-            </button>
-        </div>
-    </div>`;
+    document.getElementById("question-progress").innerHTML = `${i+1}/10`;
+    document.getElementById("question").innerHTML = `${questions[i].question}`;
+    document.getElementById("a").innerHTML = `${questions[i].answers.a}`;
+    document.getElementById("b").innerHTML = `${questions[i].answers.b}`;
+    document.getElementById("c").innerHTML = `${questions[i].answers.c}`;
+    document.getElementById("d").innerHTML = `${questions[i].answers.d}`;
 }
 
 /**
  * This function compares the selected answer with the correct answer
  */
 //Reference some of this code to David Walsh
-quizContainer.addEventListener("click", function (e) {
+function checkAnswer(e) {
     //Change color of buttons when answer selected
-    if (e.target && e.target.matches(`button#${questions[i].correctAnswer}`)) {
+    if (e.target.value && e.target.matches(`button#${questions[i].correctAnswer}`)) {
         e.target.classList.add("correct-ans");
         //Increase score if answer correct
         score++;
@@ -181,7 +163,7 @@ quizContainer.addEventListener("click", function (e) {
             buildQuiz();
         }, 1000);
     }
-});
+};
 
 function finishQuiz() {
     quizContainer.style.display = "none";
@@ -296,6 +278,10 @@ for (let x = 0; x < leagueTableBtn.length; x++) {
 
 for (let x = 0; x < backBtn.length; x++) {
     backBtn[x].addEventListener("click", back);
+}
+
+for (let x = 0; x < ansOption.length; x++) {
+    ansOption[x].addEventListener("click", checkAnswer);
 }
 
 rematchBtn.addEventListener("click", rematch);
