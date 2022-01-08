@@ -65,6 +65,8 @@ h2 {
 
 #kick-off {
     width: 30%;
+    height: 100%;
+    background-color: #9D8349;
 }
 
 #rules {
@@ -120,6 +122,12 @@ h2 {
     display: inline;
     vertical-align: middle;
     padding-left: 1rem;
+}
+
+#play {
+    text-align: center;
+    height: 5vh; 
+    margin: 2rem;
 }
 
 /*Modal styles*/

@@ -206,7 +206,7 @@ function displayScore() {
         scoreBox.innerHTML = `
     <h3>You Scored: ${score}/${i+1}</h3>
                 <div class="results-box" id="result-winner">
-                    <p id="results-content">You a bleed red and white! You've followed arsenal through unbeaten seasons and league cup final losses</p>
+                    <p id="results-content">You bleed red and white! You've followed arsenal through unbeaten seasons and league cup final losses</p>
                 </div>`
     }
 };
