@@ -222,7 +222,6 @@ function displayScore() {
     }
 };
 
-//Reference some of this code to James
 /**
  * Creates an object with the username and score, adds it into the highscores
  * then sorts the array in order of highest score first. A position property is then 
@@ -251,7 +250,6 @@ function saveScore(event) {
     score = 0;
 }
 
-//Reference this code to James
 /**
  * This function takes the highscore array, looks at each object individually
  * and targets the specific properties inserting them into the HTML of the League Table

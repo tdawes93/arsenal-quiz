@@ -1,7 +1,3 @@
-https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw - James Q Quick reference for code
-
-https://davidwalsh.name/event-delegate - David Walsh for code reference
-
 # Arsenal Quiz
 This website was built to give users a fun and interactive quiz to test their knowledge of Arsenal FC History. 
 
@@ -108,4 +104,228 @@ The live website can be found [here](link)
 
 - The site uses uppercase for titles and buttons and capitalisation for all other text. This enables readability and allows the buttons to be easily identified.  
 
-- The font has a sans-serif backup. 
+- The font has a sans-serif backup.
+
+#### Imagery
+
+- The images were selected as they show famous moments in Arsenal's history. They were chosen to create excitement whilst being a trip down memory lane.
+
+- The images have been resized to be responsive.
+
+### Wireframes/Skeleton
+
+##### Home Page
+![Home Page Wireframe](assets/wireframes/homepage-wireframe.png)
+
+##### Gallery Page
+![Gallery Page Wireframe](assets/wireframes/gallery-wireframe.png)
+
+##### Explore Page
+![Explore Page Wireframe](assets/wireframes/explore-wireframe.png)
+
+##### Booking Page
+![Booking Page Wireframe](assets/wireframes/book-wireframe.png)
+
+### Differences in finished site to initial design 
+
+
+
+### Limitations
+
+
+
+***
+
+## Features
+
+### Existing Features
+
+#### Home Page
+
+
+
+### Future Features to Implement
+
+- 
+
+***
+
+## Technologies
+
+- Languages
+    - HTML was the main language used for structure and layout
+    - CSS was used the style the website
+    - JavaScript was used to run the game and add functionality to the buttons
+
+- Tools    
+    - Font Awesome was used for the icons for the social media links
+    - Gitpod was used as an online IDE
+    - Github was used as the repository for the source code
+    - Google Fonts was used for selecting the font styles
+    - Coolers.co was used for creating the colour palette, extracting the main colours from the hero image
+    - Balsamiq Wireframes was used to create the wireframes in the Structure section of the design
+    - Google Dev Tools was used for debugging throughout development and before deployment 
+    - Lighthouse was used to audit the website for quality and accessibility 
+
+***
+
+**
+
+## Testing
+
+### Overview
+
+Testing will be performed on the layout, structure and styling of the website. To do this dev-tools (and its other browser counterparts) will be used to view the site on different browsers and different device sizes.
+
+In addition, the deployed site will be tested directly on different devices. The devices used were:
+- Laptop with 1920 x 1080px screen
+- Google Pixel 3a phone
+- iPhone XR
+
+Testing will look for the following:
+
+- All elements will remain where designed for all screen widths, with no overlapping or misalignment
+- All links will direct correctly with external links opening in a new browser tab
+- Photo titles will appear when hovered over or click upon (for handheld devices)
+- The form inputs take the correct information type and are required
+- Media shows clearly and is not distorted
+- HTML and CSS will be validated using W3C and Jigsaw
+- All pages will have a Lighthouse report generated to test for
+    - Performance
+    - Accessibility
+    - Good Practices
+    - SEO
+- The User Stories from the UX Design section will also be tested
+
+### Validator Testing
+
+- HTML 
+    - The official W3C validator came back with two errors. 
+
+    ![W3C Validator Results](assets/readme.md-images/w3c-validator.jpg) 
+
+    - These two issues were fixed as follows:
+        1.  Add additional "option" element nested inside the "select" elements.
+        2. These "option" elements have a value of "" and they are given the attributes "disabled selected hidden".
+        3. The disabled attribute stops users from selecting the value, the selected shows the placeholder inside the dropdown menu and the hidden removes the value when the user goes to select their desired option.
+
+- CSS
+    - The official Jigsaw validator was used and came back with no errors.
+
+### Lighthouse Report
+- Lighthouse Reports for all pages were run on both mobile and desktop devices. All areas tested: Performances, Accessibility, Good Practices and SEO were reported to be in the good range of 90-100.
+
+![Lighthouse Report Desktop](assets/readme.md-images/lighthouse-report-desktop.png)
+
+![Lighthouse Report Mobile](assets/readme.md-images/lighthouse-report-mobile.png)
+
+### Issues/Bugs resolved during testing
+ - Within the booking form the 'a' tag linking to 'Explore Page' wasn't working. This was resolved by updating href attribute.
+- The gallery page width was greater than screen width for all devices, this was resolved by changing ' div class="viewport" ' width from 100vw to 100%.
+- The videos in the gallery did not load when the site was originally deployed. This was fixed by changing the relative file path in gallery.html to remove the / at the beginning of each file path. 
+- Once the site was deployed the checkboxes on the 'booking form' did not line up with the labels when viewed on mobile devices. 
+***
+![Booking Form Alignment](assets/readme.md-images/checkbox_label_alignment_issue.jpeg)
+
+This was fixed by placing the 'input' tags inside the 'label' tags, placing the text within its own span and using CSS to 'vertical-align: middle; ' the input and span.
+
+- The hero image was blurry and pixelated when viewed on larger screens (roughly >770px width). This is due to the image being a screenshot rather than the original file. This was resolved by changing the image for one of a higher resolution
+
+- The images and containing divs in the Gallery and Book page overlapped when viewed on mobile devices in landscape. This was more noticeable on thinner but longer devices. This was fixed by writing a media query to target the min-width and landscape orientation.
+
+### Testing User Stories
+
+The user stories explained in the UX Design section were tested to ensure they work as intended and are easy for the users to achieve. 
+
+As a first time visitor I want:
+
+1. To understand the purpose of the website and the services on offer
+    - Upon entering the site the immediate image of a man snowboarding tells the user the theme is snowboarding. This is supported by an about section underneath
+2. To see courses on offer with prices to quickly decide if it is right for me
+    - The homepage has a brief description of courses
+    - The first section of the book page has a description of courses along with costs and other information 
+3. To see and watch initial photos/videos to get me inspired
+    - Clicking on the gallery button in the nav bar takes the user straight to a selection of images and videos
+    - There are also images throughout the site
+4. To be able to view the website on all devices
+    - Testing was performed across a variety of devices and browsers, all of which maintain design and function
+5. To be able to easily navigate the website and find the social media links
+    - The nav bar is easy to locate at the top of each page. The links are clearly named and there are various other "quick links" throughout the website, which are clear to the location.
+
+As a returning visitor I want:
+
+1. To be able to book lessons online
+    - The user is greeted on the homepage with a bright "book now" button. This takes the user to the book page, where they can see different lesson options and make an inquiry using the booking form attached
+2. To be able to contact the business to request further information
+    - The footer on all pages has the contact information (mail, phone and address). In addition, there is a link in the nav bar that takes the user straight to the contact information
+3. To find information on how I can hire equipment
+    - The Explore page contains a section with information on how you can hire equipment
+
+As a frequent visitor I want:
+
+1. To check for any new photos or videos uploaded
+    - The gallery page is accessed using the nav bar shows both photos and videos. This can easily be updated or added to as new media becomes available
+2. To check for upcoming events and competitions 
+    - On the Explore page there is a large photo/block style calendar that shows upcoming events. They contain the date and name of the event for interested users
+3. To be able to find information on snow conditions and trail maps
+    - Within the Explore page there are clear links that take the user to both updated trail maps and a live snow report. The trail maps are updated when required and the snow report is updated daily
+4. To sign up for the newsletter so I can receive updates and potential deals
+    - In the footer is a large, clear form where the user can input their email and subscribe to the newsletter. This can be accessed from all pages 
+
+***
+
+## Deployment 
+
+### GitHub Pages
+
+The project is hosted by GitHub and deployed using the following steps:
+
+1. Log in to Github and locate the [Arsenal Quiz Repository](https://github.com/tdawes93/arsenal-quiz)
+2. Click the settings button on the menu
+3. Click 'Pages' on the list on the right or scroll down until you reach 'Github Pages' and click the link
+4. Under 'Sources' select 'main' on the drop-down called 'None' and click save
+5. The page will refresh with a link to the deployed site at the top, click this to go to the live website.
+
+### Fork the GitHub
+
+If you wish to view or make changes without affecting the original repository you can 'fork the repository'. This creates a copy to your GitHub and can be done using the following steps:
+
+1. Log in to Github and locate the [Arsenal Quiz Repository](https://github.com/tdawes93/arsenal-quiz)
+2. At the top right of the repository underneath the notification icon is the 'fork' button
+3. Click this button and you should now have a copy of the repository in your Github account
+
+### Make a local clone
+
+1. Log in to Github and locate the [Arsenal Quiz Repository](https://github.com/tdawes93/arsenal-quiz)
+2. At the top of the repository next to the 'Gitpod' button click the dropdown named 'Code'
+3. To clone the repository using HTTPS, make sure HTTPS is selected and copy the link
+4. Open the Git Bash
+5. Change the working directory to the location you wish the clone to be made
+6. Type 'git clone' and paste the copied URL
+7. Press 'Enter' and your local clone will be created
+
+***
+
+## Credits
+
+- Content
+    - [Sunshine](https://www.skibanff.com/), [Lake Louise](https://www.skilouise.com/) and [Whistler](https://www.whistler.com/) ski schools as general inspiration for content and layout.
+
+- Code
+    - The code for the saveScore function and the appendScore function was taken and adapted from James Q Quick's YouTube series [Build a Quiz App](https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw).
+
+    - The method and some of the code for the checkAnswer function was taken from David Walsh's article on [Event Delegation](https://davidwalsh.name/event-delegate).
+
+    - The questions and answers were taken from [Fun Trivia Arsenal Section](https://www.funtrivia.com/en/Sports/Arsenal-7231.html).
+
+    - General inspiration for the layout and functionality of the quiz was taken from [Buzzfeed Quizzes](https://www.buzzfeed.com/uk/quizzes) and Paul Bowden's [MP2 project](https://github.com/PaulBowden673/Projects-MP-MP2-Quiz) 
+
+- Media
+    - The videos linked in the 'Booking Form' are the property of [Snowboard Pro Camp](https://www.snowboardprocamp.com/). Permission was obtained to use these videos.
+    - All other photos and videos were either downloaded from [Unsplash](https://unsplash.com/), [Pexels](https://www.pexels.com/), or owned by myself.
+
+***
+
+## Acknowledgments
+
+I'd like to thank my mentor Spencer Bariball for his support and feedback throughout the project. I'd also like to thank my friend Richard Hall for his photography skills for various images used. Finally the group of friends and family I had test and give feedback on the site on their various mobiles and laptops.
