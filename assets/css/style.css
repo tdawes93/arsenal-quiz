@@ -64,7 +64,7 @@ h2 {
 }
 
 #kick-off {
-    width: 30%;
+    width: 40%;
     height: 100%;
     background-color: #9D8349;
 }
@@ -126,7 +126,7 @@ h2 {
 
 #play {
     text-align: center;
-    height: 5vh; 
+    height: 7vh;
     margin: 2rem;
 }
 
@@ -314,6 +314,7 @@ td {
 #result-winner {
     background: url(../images/invincibles.jpg) no-repeat center center/cover;
 }
+
 #results-section {
     position: absolute;
     z-index: 1;
@@ -351,15 +352,19 @@ td {
 }
 
 @media screen and (min-width: 425px) {
-    #league-table-section, #results-section {
+
+    #league-table-section,
+    #results-section {
         top: 6rem;
-    }    
+    }
 }
 
 @media screen and (min-width: 550px) {
-    #league-table-section, #results-section {
+
+    #league-table-section,
+    #results-section {
         top: 7rem;
-    }    
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -376,13 +381,15 @@ td {
         font-size: 150%;
     }
 
-    #league-table-section, #results-section, #rules-section {
+    #league-table-section,
+    #results-section,
+    #rules-section {
         top: 8.5rem;
         position: absolute;
         width: 70vw;
         margin-left: 15vw;
         padding: 0;
-    }  
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -394,19 +401,24 @@ td {
         font-size: 100%;
     }
 
-    #league-table-section, #results-section, #rules-section {
+    #league-table-section,
+    #results-section,
+    #rules-section {
         top: 10rem;
         width: 70vw;
         margin-left: 15vw;
         padding: 0;
-    }  
+    }
 }
 
 @media screen and (min-width:1200px) {
-    #league-table-section, #results-section, #rules-section {
+
+    #league-table-section,
+    #results-section,
+    #rules-section {
         top: 11rem;
         width: 70vw;
         margin-left: 15vw;
         padding: 0;
-    }    
+    }
 }

@@ -127,6 +127,7 @@ const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
  * This function pulls up new questions. Called when the user presses 'kick-off' and then subsequently after each answer is selected
  */
 function buildQuiz(event) {
+    document.getElementById("home").style.display = "none";
     quizContainer.style.display = "block";
     document.getElementById("question-progress").innerHTML = `${i+1}/10`;
     document.getElementById("question").innerHTML = `${questions[i].question}`;
@@ -168,6 +169,9 @@ function checkAnswer(e) {
     }
 };
 
+/**
+ * This function brings up the results screen and runs the display score function
+ */
 function finishQuiz() {
     quizContainer.style.display = "none";
     resultsModal.style.display = "block";
@@ -176,6 +180,10 @@ function finishQuiz() {
     i = 0;
 }
 
+/**
+ * This function resets the variables needed to run the quiz and then 
+ * runs the build quiz function. Called when the user clicks on "rematch"
+ */
 function rematch(event) {
     i = 0;
     score = 0;
@@ -183,6 +191,9 @@ function rematch(event) {
     buildQuiz();
 }
 
+/**
+ * This function displays your score and a rating depending on how well you've done
+ */
 function displayScore() {
     if (score <= 2) {
         scoreBox.innerHTML = `
@@ -212,6 +223,13 @@ function displayScore() {
 };
 
 //Reference some of this code to James
+/**
+ * Creates an object with the username and score, adds it into the highscores
+ * then sorts the array in order of highest score first. A position property is then 
+ * added to each object and the array is cut to 20 objects long.
+ * The array is saved to local storage and the appendScores function is run.
+ * Called when the user enters their name and clicks save
+ */
 function saveScore(event) {
     event.preventDefault();
     let leagueTableEntry = {
@@ -234,28 +252,47 @@ function saveScore(event) {
 }
 
 //Reference this code to James
+/**
+ * This function takes the highscore array, looks at each object individually
+ * and targets the specific properties inserting them into the HTML of the League Table
+ */
 function appendScores() {
     tableBody.innerHTML = highscores.map(score => {
         return `<tr><td>${score.pos}</td><td class="league-table-mid-col">${score.player}</td><td>${score.score}</td></tr>`
     }).join("");
 }
 
+/**
+ * Hides the quiz and results modals and shows the homepage.
+ * Called when the user clicks on "Homepage" button
+ */
 function returnHome(event) {
     home.style.display = "block";
     quizContainer.style.display = "none";
     resultsModal.style.display = "none";
 }
 
+/**
+ * Shows the rules modal. Called when the user clicks on the "rules" button 
+ */
 function displayRules(event) {
     rulesModal.style.display = "block";
 }
 
+/**
+ * Adds the most recent function array into league table HTML
+ * Displays the league table modal and hides the results modal.
+ * Called when the user clicks on the "league-table" button
+ */
 function displayLeagueTable(event) {
     appendScores();
     leagueTableModal.style.display = "block";
     resultsModal.style.display = "none";
 }
 
+/** Hides any modal that is currently open
+ * Called when the user clicks on the "back" button
+ */
 function back(event) {
     rulesModal.style.display = "none";
     leagueTableModal.style.display = "none";
