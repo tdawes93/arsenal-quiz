@@ -200,14 +200,11 @@ Testing will look for the following:
 ### Validator Testing
 
 - HTML 
-    - The official W3C validator came back with two errors. 
+    - The official W3C validator came back with one error. 
 
-    ![W3C Validator Results](assets/readme.md-images/w3c-validator.jpg) 
+    ![W3C Validator Results](assets/images/readme-images/w3-validator.PNG) 
 
-    - These two issues were fixed as follows:
-        1.  Add additional "option" element nested inside the "select" elements.
-        2. These "option" elements have a value of "" and they are given the attributes "disabled selected hidden".
-        3. The disabled attribute stops users from selecting the value, the selected shows the placeholder inside the dropdown menu and the hidden removes the value when the user goes to select their desired option.
+    - As the empty h2 tag will be filled from the script.js file when the game is run, this issue does not need to be fixed
 
 - CSS
     - The official Jigsaw validator was used and came back with no errors.
@@ -220,18 +217,7 @@ Testing will look for the following:
 ![Lighthouse Report Mobile](assets/readme.md-images/lighthouse-report-mobile.png)
 
 ### Issues/Bugs resolved during testing
- - Within the booking form the 'a' tag linking to 'Explore Page' wasn't working. This was resolved by updating href attribute.
-- The gallery page width was greater than screen width for all devices, this was resolved by changing ' div class="viewport" ' width from 100vw to 100%.
-- The videos in the gallery did not load when the site was originally deployed. This was fixed by changing the relative file path in gallery.html to remove the / at the beginning of each file path. 
-- Once the site was deployed the checkboxes on the 'booking form' did not line up with the labels when viewed on mobile devices. 
-***
-![Booking Form Alignment](assets/readme.md-images/checkbox_label_alignment_issue.jpeg)
 
-This was fixed by placing the 'input' tags inside the 'label' tags, placing the text within its own span and using CSS to 'vertical-align: middle; ' the input and span.
-
-- The hero image was blurry and pixelated when viewed on larger screens (roughly >770px width). This is due to the image being a screenshot rather than the original file. This was resolved by changing the image for one of a higher resolution
-
-- The images and containing divs in the Gallery and Book page overlapped when viewed on mobile devices in landscape. This was more noticeable on thinner but longer devices. This was fixed by writing a media query to target the min-width and landscape orientation.
 
 ### Testing User Stories
 
@@ -239,38 +225,10 @@ The user stories explained in the UX Design section were tested to ensure they w
 
 As a first time visitor I want:
 
-1. To understand the purpose of the website and the services on offer
-    - Upon entering the site the immediate image of a man snowboarding tells the user the theme is snowboarding. This is supported by an about section underneath
-2. To see courses on offer with prices to quickly decide if it is right for me
-    - The homepage has a brief description of courses
-    - The first section of the book page has a description of courses along with costs and other information 
-3. To see and watch initial photos/videos to get me inspired
-    - Clicking on the gallery button in the nav bar takes the user straight to a selection of images and videos
-    - There are also images throughout the site
-4. To be able to view the website on all devices
-    - Testing was performed across a variety of devices and browsers, all of which maintain design and function
-5. To be able to easily navigate the website and find the social media links
-    - The nav bar is easy to locate at the top of each page. The links are clearly named and there are various other "quick links" throughout the website, which are clear to the location.
-
 As a returning visitor I want:
-
-1. To be able to book lessons online
-    - The user is greeted on the homepage with a bright "book now" button. This takes the user to the book page, where they can see different lesson options and make an inquiry using the booking form attached
-2. To be able to contact the business to request further information
-    - The footer on all pages has the contact information (mail, phone and address). In addition, there is a link in the nav bar that takes the user straight to the contact information
-3. To find information on how I can hire equipment
-    - The Explore page contains a section with information on how you can hire equipment
 
 As a frequent visitor I want:
 
-1. To check for any new photos or videos uploaded
-    - The gallery page is accessed using the nav bar shows both photos and videos. This can easily be updated or added to as new media becomes available
-2. To check for upcoming events and competitions 
-    - On the Explore page there is a large photo/block style calendar that shows upcoming events. They contain the date and name of the event for interested users
-3. To be able to find information on snow conditions and trail maps
-    - Within the Explore page there are clear links that take the user to both updated trail maps and a live snow report. The trail maps are updated when required and the snow report is updated daily
-4. To sign up for the newsletter so I can receive updates and potential deals
-    - In the footer is a large, clear form where the user can input their email and subscribe to the newsletter. This can be accessed from all pages 
 
 ***
 
@@ -318,14 +276,13 @@ If you wish to view or make changes without affecting the original repository yo
 
     - The questions and answers were taken from [Fun Trivia Arsenal Section](https://www.funtrivia.com/en/Sports/Arsenal-7231.html).
 
-    - General inspiration for the layout and functionality of the quiz was taken from [Buzzfeed Quizzes](https://www.buzzfeed.com/uk/quizzes) and Paul Bowden's [MP2 project](https://github.com/PaulBowden673/Projects-MP-MP2-Quiz) 
+    - General inspiration for the layout and functionality of the quiz was taken from [Buzzfeed Quizzes](https://www.buzzfeed.com/uk/quizzes) and Paul Bowden's [MP2 project](https://github.com/PaulBowden673/Projects-MP-MP2-Quiz). 
 
 - Media
-    - The videos linked in the 'Booking Form' are the property of [Snowboard Pro Camp](https://www.snowboardprocamp.com/). Permission was obtained to use these videos.
-    - All other photos and videos were either downloaded from [Unsplash](https://unsplash.com/), [Pexels](https://www.pexels.com/), or owned by myself.
+    - All photos were either downloaded from [Unsplash](https://unsplash.com/) or [Pexels](https://www.pexels.com/).
 
 ***
 
 ## Acknowledgments
 
-I'd like to thank my mentor Spencer Bariball for his support and feedback throughout the project. I'd also like to thank my friend Richard Hall for his photography skills for various images used. Finally the group of friends and family I had test and give feedback on the site on their various mobiles and laptops.
+I'd like to thank my mentor Spencer Bariball for his support and feedback throughout the project. I'd also like to thank the group of friends and family I had test and give feedback on the site on their various mobiles and laptops.

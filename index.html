@@ -22,15 +22,15 @@
     </section>
     <section class="main" id="home">
         <div class="controls popup-header">
-            <button class="btn" id="rules">Rules</button>
-            <button class="btn leaderboard" id="league-table-button">League Table</button>
+            <button class="btn" id="rules" aria-label="Rules">Rules</button>
+            <button class="btn leaderboard" id="league-table-button" aria-label="League Table">League Table</button>
         </div>
         <div class="popup-content" id="caption">
             <h2 class="about">Are you a true Gooner? Or are you a Tottenham fan in disguise? Find out with our Arsenal
-                Quiz! Press Kick-Off below to play!</p>
+                Quiz! Press Kick-Off below to play!</h2>
         </div>
         <div id="play">
-            <button class="btn" id="kick-off">Kick Off!</button>
+            <button class="btn" id="kick-off" aria-label="Kick Off">Kick Off!</button>
         </div>
     </section>
     <section class="main" id="game-area">
@@ -43,13 +43,13 @@
                     <p id="question"></p>
                 </div>
                 <div id="answers-box">
-                    <button value="a" class="answer-option" id="a">
+                    <button value="a" class="answer-option" id="a" aria-label="Answer Option a">
                     </button>
-                    <button value="b" class="answer-option" id="b">
+                    <button value="b" class="answer-option" id="b" aria-label="Answer Option b">
                     </button>
-                    <button value="c" class="answer-option" id="c">
+                    <button value="c" class="answer-option" id="c" aria-label="Answer Option c">
                     </button>
-                    <button value="d" class="answer-option" id="d">
+                    <button value="d" class="answer-option" id="d" aria-label="Answer Option d">
                     </button>
                 </div>
             </div>
@@ -62,20 +62,19 @@
             </div>
             <div class="popup-content">
                 <div id="score-box"></div>
-                <form action="" id="league-table-save-form">
-                    <label for="username" id="name-entry-label">Enter your name to save your score to our
+                <form action="POST" id="league-table-save-form">
+                    <label for="name-entry" id="name-entry-label">Enter your name to save your score to our
                         League-Table:</label>
                     <input type="text" placeholder="Please enter your name" name="username" id="name-entry" required>
-                    <input type="submit" value="Save" class="btn" id="save-btn" disabled>
+                    <input type="submit" value="Save" class="btn" id="save-btn" aria-label="Save" disabled>
                 </form>
 
             </div>
-        </div>
-        <div class="popup-footer">
-            <button class="btn" id="home-btn">Homepage</button>
-            <button class="btn" id="restart">ReMatch</button>
-            <button class="btn leaderboard" id="results-league-table">League Table</button>
-        </div>
+            <div class="popup-footer">
+                <button class="btn" id="home-btn" aria-label="Homepage">Homepage</button>
+                <button class="btn" id="restart" aria-label="ReMatch">ReMatch</button>
+                <button class="btn leaderboard" id="results-league-table" aria-label="League Table">League Table</button>
+            </div>
         </div>
     </section>
     <section class="main" id="rules-section">
@@ -100,7 +99,7 @@
                 </ul>
             </div>
             <div class="popup-footer">
-                <button class="btn back-btn">Back</button>
+                <button class="btn back-btn" aria-label="Back">Back</button>
             </div>
         </div>
     </section>
@@ -122,13 +121,13 @@
                 </table>
             </div>
             <div class="popup-footer">
-                <button class="btn back-btn">Back</button>
+                <button class="btn back-btn" aria-label="Back">Back</button>
             </div>
         </div>
     </section>
     <footer class="footer">
         <p>By Tom Dawes</p>
-        <a href="https://github.com/tdawes93" rel="noopener" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/tdawes93" rel="noopener" target="_blank" aria-label="Link sends you to Tom Dawes' GitHub page"><i class="fab fa-github"></i></a>
     </footer>
     <script src="https://kit.fontawesome.com/1624509f34.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
