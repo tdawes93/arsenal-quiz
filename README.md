@@ -3,7 +3,7 @@ This website was built to give users a fun and interactive quiz to test their kn
 
 This website was made as the fulfillment of the Milestone Project 2 for the Full-Stack Software Development Course provided by Code Institute. It was made using HTML, CSS and JavaScript.
 
-The live website can be found [here](link)
+The live website can be found [here](https://tdawes93.github.io/arsenal-quiz/)
 
 ![Responsive Website](./assets/images/readme-images/responsive-design-test.PNG)
 
