@@ -217,8 +217,6 @@ The quiz container is split into two sections the question section and the answe
 
 ***
 
-**
-
 ## Testing
 
 ### Overview
@@ -265,17 +263,37 @@ Testing will look for the following:
 ![Lighthouse Report Desktop](assets/images/readme-images/lighthouse-report.PNG)
 
 ### Issues/Bugs resolved during testing
-
+- After saving the score to the league table and replaying the quiz by clicking on Kick-off the game was adding the new score to the old score and the game was starting at question 10. This was resolved by resetting the variables that control the score and question count back to 0 within the displayLeagueTable function. 
+- The homepage was hidden after the quiz was run. This was due to the homepage style being changed to display = "none" when the buildQuiz function was run. This bug was fixed by adding a line to change the display back to block once the back function is run.
+- During the quiz if the user selected anywhere outside one of the answer buttons the element that was selected would turn red. This was fixed by removing the large chunk of HTML being added dynamically from the JS, inputting it into the index.html file and individually targetting the buttons to input the answers. The event listener target class was then changed to the answer button class, allowing only those classes to be selected and their background colour changed. 
 
 ### Testing User Stories
 
 The user stories explained in the UX Design section were tested to ensure they work as intended and are easy for the users to achieve. 
 
-As a first time visitor I want:
+As a first-time visitor I want:
 
-As a returning visitor I want:
+1. To understand the purpose of the site and learn how to play the game.
+    - Upon entering the site the hook line explains the function of the site and tells you how to start the quiz.
+    - The rules modal is easily found on the nav bar, which brings up the set of rules and instructions on how to play.
+2. To find the game interesting and challenging.
+    - The questions are a range of difficulty and cover the entire history of the club.
+    - The quiz is interactive and provides funny feedback to keep users engaged.
+3. To see my score when the quiz is finished.
+    - The user can save their score to the league table which then automatically loads.
+    - The score is then saved into the sites local storage so can be accessed after reloading the page/closing and reopening it.
+4. To be able to play the quiz on all devices.
+    - Testing was performed across a variety of devices and browsers, all of which maintain design and function.
 
-As a frequent visitor I want:
+As a returning/frequent visitor I want:
+
+1. To continue to enjoy the quiz even after multiple attempts.
+    - The competitive edge of most users will allow the user to continue to enjoy the game
+    - Within the features to implement section the quiz to have more questions added and include different teams to keep the quiz interesting and unique. 
+2. To find the saved League Table and try and beat the highscores.
+    - The league table button is easy to find and the league table loads automatically after saving the highscore.
+3. To share my high-score on social media.
+    - This user story has not been fulfilled but can be implemented in the future.
 
 
 ***
