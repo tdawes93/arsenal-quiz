@@ -109,19 +109,19 @@ The live website can be found [here](link)
 ### Wireframes/Skeleton
 
 ##### Home Page
-![Home Page Wireframe](assets/wireframes/homepage-wireframe.png)
+![Home Page Wireframe](/assets/images/wireframes/homepage.PNG)
 
 ##### Quiz Container
-![Quiz Container Wireframe]
+![Quiz Container Wireframe](/assets/images/wireframes/quiz-container.PNG)
 
 ##### Results Modal
-[!Results Modal Wireframe]
+![Results Modal Wireframe](/assets/images/wireframes/results-modal.PNG)
 
 ##### Rules Modal
-[!Rules Modal Wireframe]
+![Rules Modal Wireframe](/assets/images/wireframes/rules-modal.PNG)
 
 ##### League Table Modal
-[!League Table Modal Wireframe]
+![League Table Modal Wireframe](/assets/images/wireframes/league-table-modal.PNG)
 
 ### Differences in finished site to initial design 
 1. The "Kick-off" button is now placed in the centre of the homepage and coloured in gold. It was originally designed to be on the nav bar on the top left. However, after user feedback, during the testing stage, found that many users were unsure how to start the game so it was moved to be more clear and concise. 
