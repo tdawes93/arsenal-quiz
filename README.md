@@ -61,25 +61,25 @@ The live website can be found [here](link)
 - As a returning/frequent visitor I want:
 
     - To continue to enjoy the quiz even after multiple attempts.
-    - To find the saved League Table and try and beat the highscores.
-    - To share my high-score on social media.
+    - To find the saved League Table and try and beat the high scores.
+    - To share my high score on social media.
 
 ### Structure
 
-- A navigation bar will be on the homepage with links to each section/modal. Nav bar titles will be Kick-off, Rules and League-Table. This fulfills the user stories:
+- A navigation bar will be on the homepage with links to each section/modal. Navbar titles will be Kick-off, Rules and League-Table. This fulfills the user stories:
     - > "I want to understand the purpose of the site and learn how to play the game."
     - > "To be able to know how to start the quiz and navigate the site immediately."
 - The homepage will provide a basic hook line drawing the user in and explaining what to do. This fulfills the user story:
     - >"I want to understand the purpose of the site."
 - The use of CSS and media queries will make the website responsive. The initial design will be for mobile devices and the responsive design will ensure the layout changes as the screen size increases. This fulfills the user story:
     - >"I want to be able to play the quiz on all devices"
-- The quiz section will contain a question container and then a results container, when the quiz is finished. This will display the score to the user. This will fulfill user story:
+- The quiz section will contain a question container and then a results container when the quiz is finished. This will display the score to the user. This will fulfill the user story:
     - >" To see my score when the quiz is finished."
-- The results modal will contain a short form where the user can input their name and save it to the league table. The league table modal will display the top 20 highscores in order from highest to lowest. This will fulfill the user stories: 
+- The results modal will contain a short form where the user can input their name and save it to the league table. The league table modal will display the top 20 high scores in order from highest to lowest. This will fulfill the user stories: 
     - >"To see my score when the quiz is finished."
     - >"To be able to play the quiz on all devices."
-    - >"To find the saved League Table and try and beat the highscores."
-- The rules modal will contain a list of the rules and method to play this quiz. This fulfills user story:
+    - >"To find the saved League Table and try and beat the high scores."
+- The rules modal will contain a list of the rules and methods to play this quiz. This fulfills user story:
     - >"To be able to know how to start the quiz and navigate the site immediately."
 
 ### Design
@@ -88,7 +88,7 @@ The live website can be found [here](link)
 
 - The three main colours used were Red #EF0001, White #FFFFFF and Oxford Blue #172030. These colours were taken from the Arsenal FC logo to ensure they are official Arsenal FC colours. This allows the site to be instantly identifiable by football fans. 
 
-- The kick off button is coloured in Metallic Sunburst #9D8349 and the background of the page is coloured in Cultured #F1F2F3. Both these colours are taken from the official Arsenal FC website and stick with the main theme.
+- The kick-off button is coloured in Metallic Sunburst #9D8349 and the background of the page is coloured in Cultured #F1F2F3. Both these colours are taken from the official Arsenal FC website and stick with the main theme.
 
 ![Colour Scheme](/assets/images/readme-images/coolers.PNG)
 
@@ -131,7 +131,7 @@ The live website can be found [here](link)
 
 ### Limitations
 
-- The functionality of the quiz is made using JavaScript (JS) making the quiz built in front-end development. If the user wanted to they would be able to access the JS code and see the correct answers. In future the questions and programming code could be written in a back-end language to avoid this issue. 
+- The functionality of the quiz is made using JavaScript (JS) making the quiz built-in front-end development. If the user wanted to they would be able to access the JS code and see the correct answers. In the future, the questions and programming code could be written in a back-end language to avoid this issue. 
 
 
 ***
@@ -147,28 +147,28 @@ The live website can be found [here](link)
 
 ![Header and Navigation bar](/assets/images/readme-images/navigation-bar.PNG)
 - Hook line and Kick-off button
-    - A short hook line is located just underneath the nav bar, it allows the users to know what the website is about and what their first course of action should be.
-    - The Kick-off button is located centrally in the page, and is a bright contrasted colour making it easy to find and obvious to the new user.
+    - A short hook line is located just underneath the navbar, it allows the users to know what the website is about and what their first course of action should be.
+    - The Kick-off button is located centrally on the page and is a bright contrasting colour making it easy to find and obvious to the new user.
     - The Kick-off button initiates the quiz and pulls up the first question.
 
 ![Hook line and Kick-off button](/assets/images/readme-images/hook-line-kickoff-button.PNG)
 - Footer
     - The footer section contains my name and a link to my GitHub page so users know who the author is and where they can access other sites made by me. 
-    - It also matches the header creating symmetry and improves the style of the site.
+    - It also matches the header creating symmetry and improving the style of the site.
     
 ![Footer](/assets/images/readme-images/footer.PNG)
 #### Quiz Container
 The quiz container is split into two sections the question section and the answers section.
 - Question Section
     - The question section is a famous arsenal image with the question overlaid on top.
-    - The question is in 'bubble style' writing with a black border to allow the users to read the question clearly.
+    - The question is in 'bubble style' writing with a black border to allow the users to read the question.
     - Above the image is a question counter so the user knows how many questions they have answered.
 
 ![Question Section](/assets/images/readme-images/question-section.PNG)
 - Answers Section
     - The answers section is made up of four potential answers inside buttons.
     - When the user selects their answer the correct answer will highlight the button in green. If the selected answer is wrong it will highlight in red, with the correct one in green.
-    - The quiz then waits 1.5 seconds before moving onto the next question to allow the user to see if they answered correctly or not.
+    - The quiz then waits 1.5 seconds before moving on to the next question to allow the user to see if they answered correctly or not.
 
 ![Answers Section](/assets/images/readme-images/answers-box.PNG)
 
@@ -177,7 +177,7 @@ The quiz container is split into two sections the question section and the answe
     - The top part of the results section displays the score and the result category. The category gives a short humourous snippet that keeps the user engaged and motivates the user to try again
     - The bottom half of the results section allows the user to input their username and save it to the league table.
     - The save button will not be activated until a username has been typed into the input. 
-    - There is also a small nav bar with Homepage, Rematch and League-table buttons. This nav bar allows the user to replay the game or navigate away from the results without saving their score.
+    - There is also a small nav bar with Homepage, Rematch and League-table buttons. This navbar allows the user to replay the game or navigate away from the results without saving their score.
 
 ![Results Section](/assets/images/readme-images/results-section.PNG)
 #### League Table Modal
@@ -235,7 +235,7 @@ Testing will look for the following:
 - All buttons will direct correctly with external links opening in a new browser tab.
 - Correct answers will be displayed in green, incorrect answers in red.
 - The score is calculated correctly and resets when the user restarts the quiz either through the rematch button or kick-off button.
-- The form will not allow a blank username to be saved and all daved scores are save in the local storage.
+- The form will not allow a blank username to be saved and all saved scores are placed in the local storage.
 - Media shows clearly and is not distorted
 - HTML and CSS will be validated using W3C and Jigsaw
 - All pages will have a Lighthouse report generated to test for
@@ -258,7 +258,7 @@ Testing will look for the following:
     - The official Jigsaw validator was used and came back with no errors.
 
 ### Lighthouse Report
-- Lighthouse Reports for the quiz was run for all screen sizes. All areas tested: Performances, Accessibility, Good Practices and SEO were reported to be in the good range of 90-100.
+- Lighthouse Reports for the quiz were run for all screen sizes. All areas tested: Performances, Accessibility, Good Practices and SEO were reported to be in the good range of 90-100.
 
 ![Lighthouse Report Desktop](assets/images/readme-images/lighthouse-report.PNG)
 
@@ -275,13 +275,13 @@ As a first-time visitor I want:
 
 1. To understand the purpose of the site and learn how to play the game.
     - Upon entering the site the hook line explains the function of the site and tells you how to start the quiz.
-    - The rules modal is easily found on the nav bar, which brings up the set of rules and instructions on how to play.
+    - The rules modal is easily found on the navbar, which brings up the set of rules and instructions on how to play.
 2. To find the game interesting and challenging.
-    - The questions are a range of difficulty and cover the entire history of the club.
+    - The questions are a range of difficulties and cover the entire history of the club.
     - The quiz is interactive and provides funny feedback to keep users engaged.
 3. To see my score when the quiz is finished.
     - The user can save their score to the league table which then automatically loads.
-    - The score is then saved into the sites local storage so can be accessed after reloading the page/closing and reopening it.
+    - The score is then saved into the site's local storage so can be accessed after reloading the page/closing and reopening it.
 4. To be able to play the quiz on all devices.
     - Testing was performed across a variety of devices and browsers, all of which maintain design and function.
 
@@ -290,9 +290,9 @@ As a returning/frequent visitor I want:
 1. To continue to enjoy the quiz even after multiple attempts.
     - The competitive edge of most users will allow the user to continue to enjoy the game
     - Within the features to implement section the quiz to have more questions added and include different teams to keep the quiz interesting and unique. 
-2. To find the saved League Table and try and beat the highscores.
-    - The league table button is easy to find and the league table loads automatically after saving the highscore.
-3. To share my high-score on social media.
+2. To find the saved League Table and try and beat the high scores.
+    - The league table button is easy to find and the league table loads automatically after saving the high score.
+3. To share my high score on social media.
     - This user story has not been fulfilled but can be implemented in the future.
 
 
@@ -333,16 +333,14 @@ If you wish to view or make changes without affecting the original repository yo
 ## Credits
 
 - Content
-    - [Sunshine](https://www.skibanff.com/), [Lake Louise](https://www.skilouise.com/) and [Whistler](https://www.whistler.com/) ski schools as general inspiration for content and layout.
+    - General inspiration for the layout and functionality of the quiz was taken from [Buzzfeed Quizzes](https://www.buzzfeed.com/uk/quizzes) and Paul Bowden's [MP2 project](https://github.com/PaulBowden673/Projects-MP-MP2-Quiz). 
 
 - Code
     - The code for the saveScore function and the appendScore function was taken and adapted from James Q Quick's YouTube series [Build a Quiz App](https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw).
 
-    - The method and some of the code for the checkAnswer function was taken from David Walsh's article on [Event Delegation](https://davidwalsh.name/event-delegate).
+    - The method and some of the code for the checkAnswer function were taken from David Walsh's article on [Event Delegation](https://davidwalsh.name/event-delegate).
 
     - The questions and answers were taken from [Fun Trivia Arsenal Section](https://www.funtrivia.com/en/Sports/Arsenal-7231.html).
-
-    - General inspiration for the layout and functionality of the quiz was taken from [Buzzfeed Quizzes](https://www.buzzfeed.com/uk/quizzes) and Paul Bowden's [MP2 project](https://github.com/PaulBowden673/Projects-MP-MP2-Quiz). 
 
 - Media
     - All photos were either downloaded from [Unsplash](https://unsplash.com/) or [Pexels](https://www.pexels.com/).
