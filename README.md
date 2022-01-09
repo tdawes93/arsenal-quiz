@@ -54,6 +54,7 @@ The live website can be found [here](link)
     - To be able to know how to start the quiz and navigate the site immediately.
     - To find the game interesting and challenging.
     - To see my score when the quiz is finished.
+    - To be able to play the quiz on all devices.
 
 #### Returning Visitor Expectations
 
@@ -65,28 +66,22 @@ The live website can be found [here](link)
 
 ### Structure
 
-- A navigation bar will be on all pages with links to each page. Nav bar titles will be Home, Gallery, Explore, Book and Contact. This fulfills the user stories:
-    - > "I want to understand the purpose of the website and the services on offer"
-    - > "I want to be able to easily navigate the website"
-- The homepage will provide a basic intro and an overview of courses. This fulfills the user story:
-    - >"I want to understand the purpose of the website and the services on offer"
+- A navigation bar will be on the homepage with links to each section/modal. Nav bar titles will be Kick-off, Rules and League-Table. This fulfills the user stories:
+    - > "I want to understand the purpose of the site and learn how to play the game."
+    - > "To be able to know how to start the quiz and navigate the site immediately."
+- The homepage will provide a basic hook line drawing the user in and explaining what to do. This fulfills the user story:
+    - >"I want to understand the purpose of the site."
 - The use of CSS and media queries will make the website responsive. The initial design will be for mobile devices and the responsive design will ensure the layout changes as the screen size increases. This fulfills the user story:
-    - >"I want to be able to view the website on all devices"
-- A footer will be on all pages with a newsletter, contact information and social media links. This fulfills the user stories:
-    - >"I want to be able to easily navigate the website and find the social media links"
-    - >"I want to be able to contact the business to request further information"
-    - >"I want to sign up to the newsletter so I can receive updates and potential deals"
-- The Gallery page will contain two media carousels, one for photos and one for videos. There will be a horizontal scroll bar enabling the user to scroll between the images/videos. This will fulfill user stories:
-    - >"I want to see and watch initial photos/videos to get me inspired"
-    - >"I want to check for any new photos or videos uploaded"
-- The Book page will contain a form requesting information to book the relevant lessons or events. In this form will be an abilities section, which will contain links to YouTube videos explaining the required skills. It will also contain more specific information on lessons. This will fulfill the user story: 
-    - >"I want to be able to book lessons online"
-    - >"I want to see courses on offer with prices to quickly decide if it is right for me"
-- The Explore page will contain information on the team, upcoming events and more detailed information on snow reports and equipment hire. This fulfills user stories:
-    - >"I want to find information on how I can hire equipment"
-    - >"I want to be able to check for upcoming events and competitions"
-    - >"I want to be able to find information on snow conditions and trail maps"
-
+    - >"I want to be able to play the quiz on all devices"
+- The quiz section will contain a question container and then a results container, when the quiz is finished. This will display the score to the user. This will fulfill user story:
+    - >" To see my score when the quiz is finished."
+- The results modal will contain a short form where the user can input their name and save it to the league table. The league table modal will display the top 20 highscores in order from highest to lowest. This will fulfill the user stories: 
+    - >"To see my score when the quiz is finished."
+    - >"To be able to play the quiz on all devices."
+    - >"To find the saved League Table and try and beat the highscores."
+- The rules modal will contain a list of the rules and method to play this quiz. This fulfills user story:
+    - >"To be able to know how to start the quiz and navigate the site immediately."
+    
 ### Design
 
 #### Colour Scheme
@@ -116,14 +111,17 @@ The live website can be found [here](link)
 ##### Home Page
 ![Home Page Wireframe](assets/wireframes/homepage-wireframe.png)
 
-##### Gallery Page
-![Gallery Page Wireframe](assets/wireframes/gallery-wireframe.png)
+##### Quiz Container
+![Quiz Container Wireframe]
 
-##### Explore Page
-![Explore Page Wireframe](assets/wireframes/explore-wireframe.png)
+##### Results Modal
+[!Results Modal Wireframe]
 
-##### Booking Page
-![Booking Page Wireframe](assets/wireframes/book-wireframe.png)
+##### Rules Modal
+[!Rules Modal Wireframe]
+
+##### League Table Modal
+[!League Table Modal Wireframe]
 
 ### Differences in finished site to initial design 
 1. The "Kick-off" button is now placed in the centre of the homepage and coloured in gold. It was originally designed to be on the nav bar on the top left. However, after user feedback, during the testing stage, found that many users were unsure how to start the game so it was moved to be more clear and concise. 
