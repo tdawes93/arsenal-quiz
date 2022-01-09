@@ -145,8 +145,9 @@ The live website can be found [here](link)
 
 
 ### Future Features to Implement
-
-- 
+- Questions could be randomised
+- Greater choice of questions that changes the quiz each time it loads which allows frequent users to have a better experience
+- Add a button allowing the user to select their favourite team which then brings up questions for each team improving user demand. 
 
 ***
 
