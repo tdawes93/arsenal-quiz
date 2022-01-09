@@ -81,7 +81,7 @@ The live website can be found [here](link)
     - >"To find the saved League Table and try and beat the highscores."
 - The rules modal will contain a list of the rules and method to play this quiz. This fulfills user story:
     - >"To be able to know how to start the quiz and navigate the site immediately."
-    
+
 ### Design
 
 #### Colour Scheme
@@ -126,10 +126,12 @@ The live website can be found [here](link)
 ### Differences in finished site to initial design 
 1. The "Kick-off" button is now placed in the centre of the homepage and coloured in gold. It was originally designed to be on the nav bar on the top left. However, after user feedback, during the testing stage, found that many users were unsure how to start the game so it was moved to be more clear and concise. 
 
+2. The initial site was going to include a share now button to enable the user to share their score on social media and encourage others to play the quiz. This feature was not implemented as the social media accounts do not exist and to keep the quiz simple to use. 
 
 
 ### Limitations
 
+- The functionality of the quiz is made using JavaScript (JS) making the quiz built in front-end development. If the user wanted to they would be able to access the JS code and see the correct answers. In future the questions and programming code could be written in a back-end language to avoid this issue. 
 
 
 ***
