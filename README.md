@@ -155,7 +155,7 @@ The live website can be found [here](link)
 - Languages
     - HTML was the main language used for structure and layout
     - CSS was used the style the website
-    - JavaScript was used to run the game and add functionality to the buttons
+    - JavaScript was the programming language used to run the game and add functionality to the buttons
 
 - Tools    
     - Font Awesome was used for the icons for the social media links
@@ -180,14 +180,16 @@ Testing will be performed on the layout, structure and styling of the website. T
 In addition, the deployed site will be tested directly on different devices. The devices used were:
 - Laptop with 1920 x 1080px screen
 - Google Pixel 3a phone
-- iPhone XR
+- Huawei P20
+- One plus 8 Pro
 
 Testing will look for the following:
 
-- All elements will remain where designed for all screen widths, with no overlapping or misalignment
-- All links will direct correctly with external links opening in a new browser tab
-- Photo titles will appear when hovered over or click upon (for handheld devices)
-- The form inputs take the correct information type and are required
+- All elements will remain where designed for all screen widths, with no overlapping or misalignment.
+- All buttons will direct correctly with external links opening in a new browser tab.
+- Correct answers will be displayed in green, incorrect answers in red.
+- The score is calculated correctly and resets when the user restarts the quiz either through the rematch button or kick-off button.
+- The form will not allow a blank username to be saved and all daved scores are save in the local storage.
 - Media shows clearly and is not distorted
 - HTML and CSS will be validated using W3C and Jigsaw
 - All pages will have a Lighthouse report generated to test for
