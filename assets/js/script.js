@@ -294,6 +294,8 @@ function displayLeagueTable(event) {
 function back(event) {
     rulesModal.style.display = "none";
     leagueTableModal.style.display = "none";
+    document.getElementById("home").style.display = "block";
+
 }
 
 //Event Listeners//

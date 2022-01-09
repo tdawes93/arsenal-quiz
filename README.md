@@ -141,8 +141,55 @@ The live website can be found [here](link)
 ### Existing Features
 
 #### Home Page
+- Header and navigation bar
+    - Located at the top of the homepage it allows the user to navigate between the rules and the league table modals.
+    - The design is styled on the official Arsenal FC website using the same colouring and container/box styles.
 
+![Header and Navigation bar](/assets/images/readme-images/navigation-bar.PNG)
+- Hook line and Kick-off button
+    - A short hook line is located just underneath the nav bar, it allows the users to know what the website is about and what their first course of action should be.
+    - The Kick-off button is located centrally in the page, and is a bright contrasted colour making it easy to find and obvious to the new user.
+    - The Kick-off button initiates the quiz and pulls up the first question.
 
+![Hook line and Kick-off button](/assets/images/readme-images/hook-line-kickoff-button.PNG)
+- Footer
+    - The footer section contains my name and a link to my GitHub page so users know who the author is and where they can access other sites made by me. 
+    - It also matches the header creating symmetry and improves the style of the site.
+    
+![Footer](/assets/images/readme-images/footer.PNG)
+#### Quiz Container
+The quiz container is split into two sections the question section and the answers section.
+- Question Section
+    - The question section is a famous arsenal image with the question overlaid on top.
+    - The question is in 'bubble style' writing with a black border to allow the users to read the question clearly.
+    - Above the image is a question counter so the user knows how many questions they have answered.
+
+![Question Section](/assets/images/readme-images/question-section.PNG)
+- Answers Section
+    - The answers section is made up of four potential answers inside buttons.
+    - When the user selects their answer the correct answer will highlight the button in green. If the selected answer is wrong it will highlight in red, with the correct one in green.
+    - The quiz then waits 1.5 seconds before moving onto the next question to allow the user to see if they answered correctly or not.
+
+![Answers Section](/assets/images/readme-images/answers-box.PNG)
+
+#### Results Section
+- Score and result
+    - The top part of the results section displays the score and the result category. The category gives a short humourous snippet that keeps the user engaged and motivates the user to try again
+    - The bottom half of the results section allows the user to input their username and save it to the league table.
+    - The save button will not be activated until a username has been typed into the input. 
+    - There is also a small nav bar with Homepage, Rematch and League-table buttons. This nav bar allows the user to replay the game or navigate away from the results without saving their score.
+
+![Results Section](/assets/images/readme-images/results-section.PNG)
+#### League Table Modal
+- The league table modal contains a table displaying the top 20 scores and their respective "league" positions. This allows the user to see their score compared to other people around them.
+- There is also a back button that takes the user back to the homepage.
+
+![League Table Modal](/assets/images/readme-images/league-table-section.PNG)
+#### Rules Modal
+- The rules modal contains a list of rules and methods on how to play the quiz.
+- It is styled the same as the league-table modal and also includes the back button.
+
+![Rules Modal](/assets/images/readme-images/rules-modal.PNG)
 
 ### Future Features to Implement
 - Questions could be randomised
