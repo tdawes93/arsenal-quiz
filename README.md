@@ -57,18 +57,11 @@ The live website can be found [here](link)
 
 #### Returning Visitor Expectations
 
-- As a returning visitor I want:
+- As a returning/frequent visitor I want:
 
     - To continue to enjoy the quiz even after multiple attempts.
     - To find the saved League Table and try and beat the highscores.
     - To share my high-score on social media.
-    
-
-#### Frequent Visitor Expectations
-
-- As a frequent visitor I want:
-
-    - T
 
 ### Structure
 
@@ -133,6 +126,7 @@ The live website can be found [here](link)
 ![Booking Page Wireframe](assets/wireframes/book-wireframe.png)
 
 ### Differences in finished site to initial design 
+1. The "Kick-off" button is now placed in the centre of the homepage and coloured in gold. It was originally designed to be on the nav bar on the top left. However, after user feedback, during the testing stage, found that many users were unsure how to start the game so it was moved to be more clear and concise. 
 
 
 
