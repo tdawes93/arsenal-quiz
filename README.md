@@ -50,13 +50,19 @@ The live website can be found [here](link)
 
 - As a first-time visitor I want:
 
-    - T
+    - To understand the purpose of the site and learn how to play the game.
+    - To be able to know how to start the quiz and navigate the site immediately.
+    - To find the game interesting and challenging.
+    - To see my score when the quiz is finished.
 
 #### Returning Visitor Expectations
 
 - As a returning visitor I want:
 
-    - T
+    - To continue to enjoy the quiz even after multiple attempts.
+    - To find the saved League Table and try and beat the highscores.
+    - To share my high-score on social media.
+    
 
 #### Frequent Visitor Expectations
 
@@ -210,11 +216,9 @@ Testing will look for the following:
     - The official Jigsaw validator was used and came back with no errors.
 
 ### Lighthouse Report
-- Lighthouse Reports for all pages were run on both mobile and desktop devices. All areas tested: Performances, Accessibility, Good Practices and SEO were reported to be in the good range of 90-100.
+- Lighthouse Reports for the quiz was run for all screen sizes. All areas tested: Performances, Accessibility, Good Practices and SEO were reported to be in the good range of 90-100.
 
-![Lighthouse Report Desktop](assets/readme.md-images/lighthouse-report-desktop.png)
-
-![Lighthouse Report Mobile](assets/readme.md-images/lighthouse-report-mobile.png)
+![Lighthouse Report Desktop](assets/images/readme-images/lighthouse-report.PNG)
 
 ### Issues/Bugs resolved during testing
 
