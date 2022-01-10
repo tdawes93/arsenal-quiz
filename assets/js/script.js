@@ -300,7 +300,7 @@ function back(event) {
 
 //Event Listeners//
 
-username.addEventListener("keyup", saveScoreBtn)
+username.addEventListener("keyup", saveScoreBtn);
 
 homeBtn.addEventListener("click", returnHome);
 

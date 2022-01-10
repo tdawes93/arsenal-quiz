@@ -56,7 +56,7 @@ The live website can be found [here](https://tdawes93.github.io/arsenal-quiz/)
     - To see my score when the quiz is finished.
     - To be able to play the quiz on all devices.
 
-#### Returning Visitor Expectations
+#### Returning/frequent Visitor Expectations
 
 - As a returning/frequent visitor I want:
 
@@ -124,14 +124,14 @@ The live website can be found [here](https://tdawes93.github.io/arsenal-quiz/)
 ![League Table Modal Wireframe](/assets/images/wireframes/league-table-modal.PNG)
 
 ### Differences in finished site to initial design 
-1. The "Kick-off" button is now placed in the centre of the homepage and coloured in gold. It was originally designed to be on the nav bar on the top left. However, after user feedback, during the testing stage, found that many users were unsure how to start the game so it was moved to be more clear and concise. 
+1. The "Kick-off" button is now placed in the centre of the homepage and coloured in gold. It was originally designed to be on the nav bar on the top left. However, after user feedback during the testing stage found that many users were unsure how to start the game, it was moved to be more clear and concise. 
 
 2. The initial site was going to include a share now button to enable the user to share their score on social media and encourage others to play the quiz. This feature was not implemented as the social media accounts do not exist and to keep the quiz simple to use. 
 
 
 ### Limitations
 
-- The functionality of the quiz is made using JavaScript (JS) making the quiz built-in front-end development. If the user wanted to they would be able to access the JS code and see the correct answers. In the future, the questions and programming code could be written in a back-end language to avoid this issue. 
+- The functionality of the quiz is made using JavaScript (JS) meaning the quiz built in front-end development. If the user wanted to, they would be able to access the JS code and see the correct answers. In the future, the questions and programming code could be written in a back-end language to avoid this issue. 
 
 
 ***
@@ -221,7 +221,7 @@ The quiz container is split into two sections the question section and the answe
 
 ### Overview
 
-Testing will be performed on the layout, structure and styling of the website. To do this dev-tools (and its other browser counterparts) will be used to view the site on different browsers and different device sizes.
+Testing will be performed on the layout, structure and styling of the website. Tests were also performed on the functionality of the site. To do this dev-tools (and its other browser counterparts) will be used to view the site on different browsers and different device sizes.
 
 In addition, the deployed site will be tested directly on different devices. The devices used were:
 - Laptop with 1920 x 1080px screen
@@ -236,6 +236,7 @@ Testing will look for the following:
 - Correct answers will be displayed in green, incorrect answers in red.
 - The score is calculated correctly and resets when the user restarts the quiz either through the rematch button or kick-off button.
 - The form will not allow a blank username to be saved and all saved scores are placed in the local storage.
+- The saved score is added to the high scores array and stored in local storage.
 - Media shows clearly and is not distorted
 - HTML and CSS will be validated using W3C and Jigsaw
 - All pages will have a Lighthouse report generated to test for
@@ -263,7 +264,7 @@ Testing will look for the following:
 ![Lighthouse Report Desktop](assets/images/readme-images/lighthouse-report.PNG)
 
 ### Issues/Bugs resolved during testing
-- After saving the score to the league table and replaying the quiz by clicking on Kick-off the game was adding the new score to the old score and the game was starting at question 10. This was resolved by resetting the variables that control the score and question count back to 0 within the displayLeagueTable function. 
+- After saving the score to the league table and replaying the quiz by clicking on Kick-off the game was adding the new score to the old score and the game was starting at question 10. This was resolved by resetting the variables, which control the score and question count, back to 0 within the displayLeagueTable function. 
 - The homepage was hidden after the quiz was run. This was due to the homepage style being changed to display = "none" when the buildQuiz function was run. This bug was fixed by adding a line to change the display back to block once the back function is run.
 - During the quiz if the user selected anywhere outside one of the answer buttons the element that was selected would turn red. This was fixed by removing the large chunk of HTML being added dynamically from the JS, inputting it into the index.html file and individually targetting the buttons to input the answers. The event listener target class was then changed to the answer button class, allowing only those classes to be selected and their background colour changed. 
 
