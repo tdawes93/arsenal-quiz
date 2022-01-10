@@ -218,9 +218,9 @@ function displayScore() {
     <h3>You Scored: ${score}/${i+1}</h3>
                 <div class="results-box" id="result-winner">
                     <p id="results-content">You bleed red and white! You've followed arsenal through unbeaten seasons and league cup final losses</p>
-                </div>`
+                </div>`;
     }
-};
+}
 
 /**
  * Creates an object with the username and score, adds it into the highscores
@@ -238,7 +238,7 @@ function saveScore(event) {
     highscores.push(leagueTableEntry);
     highscores.sort((a, b) => {
         return b.score - a.score;
-    })
+    });
     for (i = 0; i < highscores.length; i++) {
         highscores[i].pos = i + 1;
     }
@@ -256,7 +256,7 @@ function saveScore(event) {
  */
 function appendScores() {
     tableBody.innerHTML = highscores.map(score => {
-        return `<tr><td>${score.pos}</td><td class="league-table-mid-col">${score.player}</td><td>${score.score}</td></tr>`
+        return `<tr><td>${score.pos}</td><td class="league-table-mid-col">${score.player}</td><td>${score.score}</td></tr>`;
     }).join("");
 }
 
@@ -265,7 +265,7 @@ function appendScores() {
  * Called when the user clicks on "Homepage" button
  */
 function returnHome(event) {
-    home.style.display = "block";
+    homeBtn.style.display = "block";
     quizContainer.style.display = "none";
     resultsModal.style.display = "none";
 }
@@ -312,7 +312,7 @@ saveScoreBtn.addEventListener("click", saveScore);
 
 username.addEventListener("keyup", () => {
     saveScoreBtn.disabled = !username.value;
-})
+});
 
 for (let x = 0; x < leagueTableBtn.length; x++) {
     leagueTableBtn[x].addEventListener("click", displayLeagueTable);
